@@ -43,7 +43,7 @@ def extract_c3d(video_directory):
         extractor = VideoC3DExtractor(20, sess)
         for i in range(0, 10000):
             video_path = os.path.join(
-                video_directory, 'video' + str(i) + '.mp4')
+                video_directory, 'ZJL' + str(i) + '.mp4')
             print('[C3D]', video_path)
             c3d_features.append(extractor.extract(video_path))
             # print(c3d_features[-1])
@@ -133,7 +133,10 @@ def create_qa_encode(vttqa_path, vocab_path, answerset_path,
     def _encode_answer(row):
         """Map answer to category id."""
         answer = row['answer']
+
+        # to be modified
         answer_id = answerset[answerset == answer].index[0]
+
         return answer_id
 
     print('start train split encoding.')

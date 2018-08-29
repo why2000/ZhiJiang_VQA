@@ -43,7 +43,7 @@ def extract_c3d(video_directory):
         extractor = VideoC3DExtractor(20, sess)
         for i in range(1, 1971):
             video_path = os.path.join(
-                video_directory, 'vid' + str(i) + '.avi')
+                video_directory, 'ZJL' + str(i) + '.mp4')
             print('[C3D]', video_path)
             c3d_features.append(extractor.extract(video_path))
             # print(c3d_features[-1])
