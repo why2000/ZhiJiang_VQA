@@ -1,0 +1,10 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="true" />
+    <option name="ALIGN_MULTILINE_PARAMETERS_IN_CALLS" value="true" />
+    <Python>
+      <option name="DICT_ALIGNMENT" value="1" />
+      <option name="USE_CONTINUATION_INDENT_FOR_ARGUMENTS" value="true" />
+    </Python>
+  </code_scheme>
+</component>
