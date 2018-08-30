@@ -24,7 +24,7 @@ def extract_vgg(video_directory):
         extractor = VideoVGGExtractor(20, sess)
         for i in range(0, 10000):
             video_path = os.path.join(
-                video_directory, 'ZJL' + str(i) + '.mp4')
+                video_directory,  str(i) + '.mp4')
             print('[VGG]', video_path)
             if os.path.isfile(video_path):
                 vgg_features.append(extractor.extract(video_path))
@@ -44,7 +44,7 @@ def extract_c3d(video_directory):
         extractor = VideoC3DExtractor(20, sess)
         for i in range(0, 10000):
             video_path = os.path.join(
-                video_directory, 'ZJL' + str(i) + '.mp4')
+                video_directory, str(i) + '.mp4')
             print('[C3D]', video_path)
             if os.path.isfile(video_path):
                 c3d_features.append(extractor.extract(video_path))
