@@ -218,13 +218,13 @@ def test(dataset, config, log_dir):
 def main():
     """Main script."""
     parser = argparse.ArgumentParser()
-    parser.add_argument('--mode', required=True,
+    parser.add_argument('--mode', default='test',
                         help='train/test')
-    parser.add_argument('--gpu', required=True,
+    parser.add_argument('--gpu', default='0',
                         help='gpu id')
-    parser.add_argument('--log', required=True,
+    parser.add_argument('--log', default='./log',
                         help='log directory')
-    parser.add_argument('--dataset', required=True,
+    parser.add_argument('--dataset', choices=['msvd_qa', 'msrvtt_qa'], default='msrvtt_qa',
                         help='dataset name, msvd_qa/msrvtt_qa')
     parser.add_argument('--config', required=True,
                         help='config id')
