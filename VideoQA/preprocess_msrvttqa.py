@@ -69,10 +69,9 @@ def create_answerset(trainqa_path, answerset_path):
         answerset_path: generate answer set of mc_qa
     """
     train_qa = pd.read_json(trainqa_path)
-    for answer in train_qa['answer']:
-        answer_freq = answer.value_counts()
-        answer_freq = DataFrame(answer_freq.iloc[0:])
-        answer_freq.to_csv(answerset_path, columns=[], header=False)
+    answer_freq = train_qa['answer'].value_counts()
+    answer_freq = DataFrame(answer_freq.iloc[0:1000])
+    answer_freq.to_csv(answerset_path, columns=[], header=False)
 
 
 def create_vocab(trainqa_path, answerset_path, vocab_path):
@@ -133,10 +132,10 @@ def create_qa_encode(vttqa_path, vocab_path, answerset_path,
 
     def _encode_answer(row):
         """Map answer to category id."""
-        answer = row['answer']
+        answers = row['answer']
 
         # to be modified
-        answer_id = answerset[answerset == answer].index[0]
+        answer_id = [answerset[answerset == answer].index[0] for answer in answers]
 
         return answer_id
 
@@ -156,10 +155,11 @@ def create_qa_encode(vttqa_path, vocab_path, answerset_path,
 def main():
     if not os.path.isdir('../data/msrvtt_qa'):
         os.makedirs('../data/msrvtt_qa')
-
+    # 服务器上跑
     # extract_video_feature('../data/msrvtt_qa/train',
     #                       '../data/msrvtt_qa/video_feature_20.h5')
 
+    # 用逐条式数据集
     create_answerset('../data/msrvtt_qa/train_qa.json',
                      '../data/msrvtt_qa/answer_set.txt')
 
@@ -171,6 +171,7 @@ def main():
                     'util/glove.6B.300d.txt',
                     '../data/msrvtt_qa/word_embedding.npy')
 
+    # 用列表式数据集
     # create_qa_encode(sys.argv[1],
     #                  '../data/msrvtt_qa/vocab.txt',
     #                  '../data/msrvtt_qa/answer_set.txt',
