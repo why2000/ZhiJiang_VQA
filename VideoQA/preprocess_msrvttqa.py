@@ -172,28 +172,28 @@ def main():
     if not os.path.isdir('../data/msrvtt_qa'):
         os.makedirs('../data/msrvtt_qa')
     # 服务器上跑
-    extract_video_feature('../data/train',
-                          '../data/msrvtt_qa/video_feature_20.h5')
+    # extract_video_feature('../data/train',
+    #                       '../data/msrvtt_qa/video_feature_20.h5')
 
     # 用逐条式数据集
-    # create_answerset('../data/msrvtt_qa/train_qa.json',
-    #                  '../data/msrvtt_qa/answer_set.txt')
-    #
-    # create_vocab('../data/msrvtt_qa/train_qa.json',
-    #              '../data/msrvtt_qa/answer_set.txt',
-    #              '../data/msrvtt_qa/vocab.txt')
-    #
-    # prune_embedding('../data/msrvtt_qa/vocab.txt',
-    #                 'util/glove.6B.300d.txt',
-    #                 '../data/msrvtt_qa/word_embedding.npy')
+    create_answerset('../data/msrvtt_qa/train_qa_sp.json',
+                     '../data/msrvtt_qa/answer_set.txt')
+
+    create_vocab('../data/msrvtt_qa/train_qa_sp.json',
+                 '../data/msrvtt_qa/answer_set.txt',
+                 '../data/msrvtt_qa/vocab.txt')
+
+    prune_embedding('../data/msrvtt_qa/vocab.txt',
+                    'util/glove.6B.300d.txt',
+                    '../data/msrvtt_qa/word_embedding.npy')
 
     # 用列表式数据集
-    create_qa_encode('../data/msrvtt_qa/',
-                     '../data/msrvtt_qa/vocab.txt',
-                     '../data/msrvtt_qa/answer_set.txt',
-                     '../data/msrvtt_qa/train_qa_encode.json',
-                     '../data/msrvtt_qa/val_qa_encode.json',
-                     '../data/msrvtt_qa/test_qa_encode.json')
+    # create_qa_encode('../data/msrvtt_qa/',
+    #                  '../data/msrvtt_qa/vocab.txt',
+    #                  '../data/msrvtt_qa/answer_set.txt',
+    #                  '../data/msrvtt_qa/train_qa_encode.json',
+    #                  '../data/msrvtt_qa/val_qa_encode.json',
+    #                  '../data/msrvtt_qa/test_qa_encode.json')
 
 
 if __name__ == '__main__':
