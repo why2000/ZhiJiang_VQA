@@ -26,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preprocess.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="preprocess.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/preprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-421">
-              <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+            <state relative-caret-position="131">
+              <caret line="83" column="52" lean-forward="true" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="52" />
               <folding>
                 <element signature="e#37#46#0" expanded="true" />
               </folding>
@@ -38,10 +38,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="c3d.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/c3d.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-727">
+              <caret line="58" column="23" lean-forward="false" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="dataset.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/dataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
+            <state relative-caret-position="-1609">
               <caret line="174" column="13" lean-forward="false" selection-start-line="174" selection-start-column="13" selection-end-line="174" selection-end-column="13" />
               <folding>
                 <element signature="e#27#36#0" expanded="true" />
@@ -53,8 +63,8 @@
       <file leaf-file-name="evqa.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/evqa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            <state relative-caret-position="476">
+              <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -63,7 +73,7 @@
       <file leaf-file-name="run_evqa.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_evqa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1589">
+            <state relative-caret-position="3163">
               <caret line="228" column="47" lean-forward="false" selection-start-line="228" selection-start-column="47" selection-end-line="228" selection-end-column="47" />
               <folding>
                 <element signature="e#22#31#0" expanded="true" />
@@ -82,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preprocess_msrvttqa.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="preprocess_msrvttqa.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/preprocess_msrvttqa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            <state relative-caret-position="287">
+              <caret line="130" column="10" lean-forward="true" selection-start-line="130" selection-start-column="10" selection-end-line="130" selection-end-column="10" />
               <folding>
                 <element signature="e#40#49#0" expanded="true" />
               </folding>
@@ -128,8 +138,11 @@
       <find>log_loss'</find>
       <find>log_loss</find>
       <find>vgg16.npy</find>
-      <find>video_id</find>
       <find>.mp4</find>
+      <find>sports1m_finetuning_ucf101.model</find>
+      <find>crop_mean.npy</find>
+      <find>self.mean</find>
+      <find>video_id</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -428,14 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/c3d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1090">
@@ -444,17 +449,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/evqa.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run_evqa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1589">
+        <state relative-caret-position="3163">
           <caret line="228" column="47" lean-forward="false" selection-start-line="228" selection-start-column="47" selection-end-line="228" selection-end-column="47" />
           <folding>
             <element signature="e#22#31#0" expanded="true" />
@@ -462,9 +459,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/evqa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/c3d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-727">
+          <caret line="58" column="23" lean-forward="false" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="83" column="52" lean-forward="true" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="52" />
+          <folding>
+            <element signature="e#37#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/util/dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
+        <state relative-caret-position="-1609">
           <caret line="174" column="13" lean-forward="false" selection-start-line="174" selection-start-column="13" selection-end-line="174" selection-end-column="13" />
           <folding>
             <element signature="e#27#36#0" expanded="true" />
@@ -474,20 +497,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/preprocess_msrvttqa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        <state relative-caret-position="287">
+          <caret line="130" column="10" lean-forward="true" selection-start-line="130" selection-start-column="10" selection-end-line="130" selection-end-column="10" />
           <folding>
             <element signature="e#40#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-421">
-          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding>
-            <element signature="e#37#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
