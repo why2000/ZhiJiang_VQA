@@ -111,11 +111,18 @@ def create_qa_encode(vttqa_path, vocab_path, answerset_path,
     In train split, remove answers not in answer set and convert question and answer
     to one hot encoding. In val and test split, only convert question to one hot encoding.
     """
+
+    def none_in(sub_list, par_list):
+        for item in sub_list:
+            if item in par_list:
+                return True
+        return False
+
     train_qa = pd.read_json(os.path.join(vttqa_path, 'train_qa.json'))
     # remove question whose answer not in answer set
     answerset = pd.read_csv(answerset_path, header=None)[0]
-    train_qa = train_qa[train_qa['answer'][0] in answerset or train_qa['answer'][1] in answerset or train_qa['answer'][2] in answerset]
-
+    drop_list = [index for index, row in train_qa.iterrows() if none_in(row['answer'], answerset)]
+    train_qa = train_qa.drop(drop_list)
     val_qa = pd.read_json(os.path.join(vttqa_path, 'val_qa.json'))
     test_qa = pd.read_json(os.path.join(vttqa_path, 'test_qa.json'))
     vocab = pd.read_csv(vocab_path, header=None)[0]
