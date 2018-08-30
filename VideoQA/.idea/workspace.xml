@@ -10,7 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/VideoQA$preprocess_msrvttqa.coverage" NAME="preprocess_msrvttqa Coverage Results" MODIFIED="1535637725413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VideoQA$preprocess_msrvttqa.coverage" NAME="preprocess_msrvttqa Coverage Results" MODIFIED="1535638545709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf>
@@ -83,8 +83,8 @@
       <file leaf-file-name="preprocess_msrvttqa.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/preprocess_msrvttqa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="190" column="44" lean-forward="true" selection-start-line="190" selection-start-column="44" selection-end-line="196" selection-end-column="0" />
+            <state relative-caret-position="169">
+              <caret line="178" column="42" lean-forward="false" selection-start-line="178" selection-start-column="42" selection-end-line="187" selection-end-column="40" />
               <folding>
                 <element signature="e#40#49#0" expanded="true" />
               </folding>
@@ -493,8 +493,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/preprocess_msrvttqa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="190" column="44" lean-forward="true" selection-start-line="190" selection-start-column="44" selection-end-line="196" selection-end-column="0" />
+        <state relative-caret-position="169">
+          <caret line="178" column="42" lean-forward="false" selection-start-line="178" selection-start-column="42" selection-end-line="187" selection-end-column="40" />
           <folding>
             <element signature="e#40#49#0" expanded="true" />
           </folding>
