@@ -161,16 +161,16 @@ def main():
                           '../data/msrvtt_qa/video_feature_20.h5')
 
     # 用逐条式数据集
-    create_answerset('../data/msrvtt_qa/train_qa.json',
-                     '../data/msrvtt_qa/answer_set.txt')
+    # create_answerset('../data/msrvtt_qa/train_qa.json',
+    #                  '../data/msrvtt_qa/answer_set.txt')
 
-    create_vocab('../data/msrvtt_qa/train_qa.json',
-                 '../data/msrvtt_qa/answer_set.txt',
-                 '../data/msrvtt_qa/vocab.txt')
+    # create_vocab('../data/msrvtt_qa/train_qa.json',
+    #              '../data/msrvtt_qa/answer_set.txt',
+    #              '../data/msrvtt_qa/vocab.txt')
 
-    prune_embedding('../data/msrvtt_qa/vocab.txt',
-                    'util/glove.6B.300d.txt',
-                    '../data/msrvtt_qa/word_embedding.npy')
+    # prune_embedding('../data/msrvtt_qa/vocab.txt',
+    #                 'util/glove.6B.300d.txt',
+    #                 '../data/msrvtt_qa/word_embedding.npy')
 
     # 用列表式数据集
     create_qa_encode(sys.argv[1],
