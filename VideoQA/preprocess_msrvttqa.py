@@ -157,7 +157,7 @@ def main():
     if not os.path.isdir('../data/msrvtt_qa'):
         os.makedirs('../data/msrvtt_qa')
     # 服务器上跑
-    extract_video_feature('../data/msrvtt_qa/train',
+    extract_video_feature('../data/train',
                           '../data/msrvtt_qa/video_feature_20.h5')
 
     # 用逐条式数据集
