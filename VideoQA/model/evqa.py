@@ -89,11 +89,11 @@ class EVQA(object):
             answer_one_hot = tf.one_hot(
                 self.answer_encode, self.answer_num)
         with tf.name_scope('loss'):
-            log_loss = tf.losses.log_loss(
-                answer_one_hot, self.logit, scope='log_loss')
+            sig_loss = tf.nn.sigmoid_cross_entropy_with_logits(
+                answer_one_hot, self.logit, scope='sig_loss')
             reg_loss = tf.add_n(
                 tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES), name='reg_loss')
-            self.loss = log_loss + reg_coeff * reg_loss
+            self.loss = sig_loss + reg_coeff * reg_loss
         with tf.name_scope("acc"):
             correct = tf.equal(self.prediction, self.answer_encode)
             self.acc = tf.reduce_mean(tf.cast(correct, "float"))

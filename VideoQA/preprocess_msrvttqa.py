@@ -69,6 +69,7 @@ def create_answerset(trainqa_path, answerset_path):
         answerset_path: generate answer set of mc_qa
     """
     train_qa = pd.read_json(trainqa_path)
+    # print(train_qa)
     answer_freq = train_qa['answer'].value_counts()
     answer_freq = DataFrame(answer_freq.iloc[0:1000])
     answer_freq.to_csv(answerset_path, columns=[], header=False)
