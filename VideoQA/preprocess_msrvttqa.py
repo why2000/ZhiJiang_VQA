@@ -122,6 +122,7 @@ def create_qa_encode(vttqa_path, vocab_path, answerset_path,
     # remove question whose answer not in answer set
     answerset = pd.read_csv(answerset_path, header=None)[0]
     drop_list = [index for index, row in train_qa.iterrows() if not_all_in(row['answer'], answerset)]
+    print([row['answer'] for index, row in train_qa.iterrows()])
     print(drop_list)
     train_qa = train_qa.drop(drop_list)
     val_qa = pd.read_json(os.path.join(vttqa_path, 'val_qa.json'))
