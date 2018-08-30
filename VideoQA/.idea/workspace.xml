@@ -14,23 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="run_emn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run_emn.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1164">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="e#21#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="preprocess.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="preprocess.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/util/preprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="83" column="52" lean-forward="true" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="52" />
+            <state relative-caret-position="346">
+              <caret line="84" column="61" lean-forward="false" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="61" />
               <folding>
                 <element signature="e#37#46#0" expanded="true" />
               </folding>
@@ -92,7 +80,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preprocess_msrvttqa.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="preprocess_msrvttqa.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/preprocess_msrvttqa.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="287">
@@ -138,11 +126,11 @@
       <find>log_loss'</find>
       <find>log_loss</find>
       <find>vgg16.npy</find>
-      <find>.mp4</find>
       <find>sports1m_finetuning_ucf101.model</find>
       <find>crop_mean.npy</find>
-      <find>self.mean</find>
       <find>video_id</find>
+      <find>.mp4</find>
+      <find>self.mean</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -467,24 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/c3d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-727">
-          <caret line="58" column="23" lean-forward="false" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="83" column="52" lean-forward="true" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="52" />
-          <folding>
-            <element signature="e#37#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util/dataset.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1609">
@@ -501,6 +471,32 @@
           <caret line="130" column="10" lean-forward="true" selection-start-line="130" selection-start-column="10" selection-end-line="130" selection-end-column="10" />
           <folding>
             <element signature="e#40#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/c3d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-727">
+          <caret line="58" column="23" lean-forward="false" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/envs/python36/python.app/Contents/lib/python3.6/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="84" column="61" lean-forward="false" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="61" />
+          <folding>
+            <element signature="e#37#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
