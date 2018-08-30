@@ -150,28 +150,28 @@ def create_qa_encode(vttqa_path, vocab_path, answerset_path,
 
 
 def main():
-    os.makedirs('data/msvd_qa')
+    os.makedirs('../data/msvd_qa')
 
     extract_video_feature(os.path.join(sys.argv[1], 'video'),
-                          'data/msvd_qa/video_feature_20.h5')
+                          '../data/msvd_qa/video_feature_20.h5')
 
     create_answerset(os.path.join(sys.argv[1], 'train_qa.json'),
-                     'data/msvd_qa/answer_set.txt')
+                     '../data/msvd_qa/answer_set.txt')
 
     create_vocab(os.path.join(sys.argv[1], 'train_qa.json'),
-                 'data/msvd_qa/answer_set.txt',
-                 'data/msvd_qa/vocab.txt')
+                 '../data/msvd_qa/answer_set.txt',
+                 '../data/msvd_qa/vocab.txt')
 
-    prune_embedding('data/msvd_qa/vocab.txt',
+    prune_embedding('../data/msvd_qa/vocab.txt',
                     'util/glove.6B.300d.txt',
-                    'data/msvd_qa/word_embedding.npy')
+                    '../data/msvd_qa/word_embedding.npy')
 
     create_qa_encode(sys.argv[1],
-                     'data/msvd_qa/vocab.txt',
-                     'data/msvd_qa/answer_set.txt',
-                     'data/msvd_qa/train_qa_encode.json',
-                     'data/msvd_qa/val_qa_encode.json',
-                     'data/msvd_qa/test_qa_encode.json')
+                     '../data/msvd_qa/vocab.txt',
+                     '../data/msvd_qa/answer_set.txt',
+                     '../data/msvd_qa/train_qa_encode.json',
+                     '../data/msvd_qa/val_qa_encode.json',
+                     '../data/msvd_qa/test_qa_encode.json')
 
 
 if __name__ == '__main__':

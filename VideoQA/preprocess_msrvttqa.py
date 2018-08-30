@@ -69,9 +69,10 @@ def create_answerset(trainqa_path, answerset_path):
         answerset_path: generate answer set of mc_qa
     """
     train_qa = pd.read_json(trainqa_path)
-    answer_freq = train_qa['answer'].value_counts()
-    answer_freq = DataFrame(answer_freq.iloc[0:1000])
-    answer_freq.to_csv(answerset_path, columns=[], header=False)
+    for answer in train_qa['answer']:
+        answer_freq = answer.value_counts()
+        answer_freq = DataFrame(answer_freq.iloc[0:])
+        answer_freq.to_csv(answerset_path, columns=[], header=False)
 
 
 def create_vocab(trainqa_path, answerset_path, vocab_path):
@@ -153,28 +154,29 @@ def create_qa_encode(vttqa_path, vocab_path, answerset_path,
 
 
 def main():
-    os.makedirs('data/msrvtt_qa')
+    if not os.path.isdir('../data/msrvtt_qa'):
+        os.makedirs('../data/msrvtt_qa')
 
-    extract_video_feature(os.path.join(sys.argv[1], 'video'),
-                          'data/msrvtt_qa/video_feature_20.h5')
+    # extract_video_feature('../data/msrvtt_qa/train',
+    #                       '../data/msrvtt_qa/video_feature_20.h5')
 
-    create_answerset(os.path.join(sys.argv[1], 'train_qa.json'),
-                     'data/msrvtt_qa/answer_set.txt')
+    create_answerset('../data/msrvtt_qa/train_qa.json',
+                     '../data/msrvtt_qa/answer_set.txt')
 
-    create_vocab(os.path.join(sys.argv[1], 'train_qa.json'),
-                 'data/msrvtt_qa/answer_set.txt',
-                 'data/msrvtt_qa/vocab.txt')
+    create_vocab('../data/msrvtt_qa/train_qa.json',
+                 '../data/msrvtt_qa/answer_set.txt',
+                 '../data/msrvtt_qa/vocab.txt')
 
-    prune_embedding('data/msrvtt_qa/vocab.txt',
+    prune_embedding('../data/msrvtt_qa/vocab.txt',
                     'util/glove.6B.300d.txt',
-                    'data/msrvtt_qa/word_embedding.npy')
+                    '../data/msrvtt_qa/word_embedding.npy')
 
-    create_qa_encode(sys.argv[1],
-                     'data/msrvtt_qa/vocab.txt',
-                     'data/msrvtt_qa/answer_set.txt',
-                     'data/msrvtt_qa/train_qa_encode.json',
-                     'data/msrvtt_qa/val_qa_encode.json',
-                     'data/msrvtt_qa/test_qa_encode.json')
+    # create_qa_encode(sys.argv[1],
+    #                  '../data/msrvtt_qa/vocab.txt',
+    #                  '../data/msrvtt_qa/answer_set.txt',
+    #                  '../data/msrvtt_qa/train_qa_encode.json',
+    #                  '../data/msrvtt_qa/val_qa_encode.json',
+    #                  '../data/msrvtt_qa/test_qa_encode.json')
 
 
 if __name__ == '__main__':

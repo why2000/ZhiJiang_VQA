@@ -10,7 +10,7 @@ CONFIG = {
                 'model': {
                     'word_dim': 300,
                     'vocab_num': 4000,
-                    'pretrained_embedding': 'data/msvd_qa/word_embedding.npy',
+                    'pretrained_embedding': '../data/msvd_qa/word_embedding.npy',
                     'video_feature_dim': 4096,
                     'video_feature_num': 20,
                     'answer_num': 1000,
@@ -28,7 +28,7 @@ CONFIG = {
                 'model': {
                     'word_dim': 300,
                     'vocab_num': 8000,
-                    'pretrained_embedding': 'data/msrvtt_qa/word_embedding.npy',
+                    'pretrained_embedding': '../data/msrvtt_qa/word_embedding.npy',
                     'video_feature_dim': 4096,
                     'video_feature_num': 20,
                     'answer_num': 1000,
@@ -48,7 +48,7 @@ CONFIG = {
                 'model': {
                     'word_dim': 300,
                     'vocab_num': 4000,
-                    'pretrained_embedding': 'data/msvd_qa/word_embedding.npy',
+                    'pretrained_embedding': '../data/msvd_qa/word_embedding.npy',
                     'video_feature_dim': 4096,
                     'video_feature_num': 20,
                     'answer_num': 1000,
@@ -66,7 +66,7 @@ CONFIG = {
                 'model': {
                     'word_dim': 300,
                     'vocab_num': 8000,
-                    'pretrained_embedding': 'data/msrvtt_qa/word_embedding.npy',
+                    'pretrained_embedding': '../data/msrvtt_qa/word_embedding.npy',
                     'video_feature_dim': 4096,
                     'video_feature_num': 20,
                     'answer_num': 1000,
@@ -86,7 +86,7 @@ CONFIG = {
                 'model': {
                     'word_dim': 300,
                     'vocab_num': 4000,
-                    'pretrained_embedding': 'data/msvd_qa/word_embedding.npy',
+                    'pretrained_embedding': '../data/msvd_qa/word_embedding.npy',
                     'video_feature_dim': 4096,
                     'video_feature_num': 20,
                     'answer_num': 1000,
@@ -104,7 +104,7 @@ CONFIG = {
                 'model': {
                     'word_dim': 300,
                     'vocab_num': 8000,
-                    'pretrained_embedding': 'data/msrvtt_qa/word_embedding.npy',
+                    'pretrained_embedding': '../data/msrvtt_qa/word_embedding.npy',
                     'video_feature_dim': 4096,
                     'video_feature_num': 20,
                     'answer_num': 1000,
@@ -124,7 +124,7 @@ CONFIG = {
                 'model': {
                     'word_dim': 300,
                     'vocab_num': 4000,
-                    'pretrained_embedding': 'data/msvd_qa/word_embedding.npy',
+                    'pretrained_embedding': '../data/msvd_qa/word_embedding.npy',
                     'appear_dim': 4096,
                     'frame_num': 20,
                     'motion_dim': 4096,
@@ -145,7 +145,7 @@ CONFIG = {
                 'model': {
                     'word_dim': 300,
                     'vocab_num': 8000,
-                    'pretrained_embedding': 'data/msrvtt_qa/word_embedding.npy',
+                    'pretrained_embedding': '../data/msrvtt_qa/word_embedding.npy',
                     'appear_dim': 4096,
                     'frame_num': 20,
                     'motion_dim': 4096,
@@ -170,9 +170,9 @@ def get(model, dataset, config_id, gpu_list):
     """Generate configuration."""
     config = {}
     if dataset == 'msvd_qa':
-        config['preprocess_dir'] = 'data/msvd_qa'
+        config['preprocess_dir'] = '../data/msvd_qa'
     elif dataset == 'msrvtt_qa':
-        config['preprocess_dir'] = 'data/msrvtt_qa'
+        config['preprocess_dir'] = '../data/msrvtt_qa'
 
     config['model'] = CONFIG[model][dataset][config_id]['model']
     config['train'] = CONFIG[model][dataset][config_id]['train']
