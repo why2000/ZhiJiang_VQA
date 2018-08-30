@@ -127,6 +127,7 @@ def create_qa_encode(vttqa_path, vocab_path, answerset_path,
     # print(list(answerset))
     print(drop_list)
     train_qa = train_qa.drop(drop_list)
+    print(train_qa)
     val_qa = pd.read_json(os.path.join(vttqa_path, 'val_qa.json'))
     test_qa = pd.read_json(os.path.join(vttqa_path, 'test_qa.json'))
     vocab = pd.read_csv(vocab_path, header=None)[0]
