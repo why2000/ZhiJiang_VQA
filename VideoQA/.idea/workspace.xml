@@ -63,8 +63,8 @@
       <file leaf-file-name="run_evqa.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_evqa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="68" column="45" lean-forward="false" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
+            <state relative-caret-position="184">
+              <caret line="228" column="45" lean-forward="false" selection-start-line="228" selection-start-column="45" selection-end-line="228" selection-end-column="45" />
               <folding>
                 <element signature="e#22#31#0" expanded="true" />
               </folding>
@@ -75,7 +75,7 @@
       <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2062">
+            <state relative-caret-position="-1090">
               <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
               <folding />
             </state>
@@ -133,9 +133,9 @@
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/preprocess_msvdqa.py" />
         <option value="$PROJECT_DIR$/TODO.md" />
-        <option value="$PROJECT_DIR$/run_evqa.py" />
         <option value="$PROJECT_DIR$/model/evqa.py" />
         <option value="$PROJECT_DIR$/preprocess_msrvttqa.py" />
+        <option value="$PROJECT_DIR$/run_evqa.py" />
       </list>
     </option>
   </component>
@@ -410,14 +410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2062">
-          <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda2/envs/python36/python.app/Contents/lib/python3.6/site-packages/h5py/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -433,14 +425,6 @@
           <folding>
             <element signature="e#27#36#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/evqa.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="87" column="16" lean-forward="false" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -464,10 +448,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/evqa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="87" column="16" lean-forward="false" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1090">
+          <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/run_evqa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="68" column="45" lean-forward="false" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
+        <state relative-caret-position="184">
+          <caret line="228" column="45" lean-forward="false" selection-start-line="228" selection-start-column="45" selection-end-line="228" selection-end-column="45" />
           <folding>
             <element signature="e#22#31#0" expanded="true" />
           </folding>

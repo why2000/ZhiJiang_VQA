@@ -226,7 +226,7 @@ def main():
                         help='log directory')
     parser.add_argument('--dataset', choices=['msvd_qa', 'msrvtt_qa'], default='msrvtt_qa',
                         help='dataset name, msvd_qa/msrvtt_qa')
-    parser.add_argument('--config', required=True,
+    parser.add_argument('--config', default=0,
                         help='config id')
     args = parser.parse_args()
 
