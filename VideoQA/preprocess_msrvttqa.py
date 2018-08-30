@@ -115,8 +115,8 @@ def create_qa_encode(vttqa_path, vocab_path, answerset_path,
     def not_all_in(sub_list, par_list):
         for item in sub_list:
             if item not in par_list:
-                return False
-        return True
+                return True
+        return False
 
     train_qa = pd.read_json(os.path.join(vttqa_path, 'train_qa.json'))
     # remove question whose answer not in answer set
