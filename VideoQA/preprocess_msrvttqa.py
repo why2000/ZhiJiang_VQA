@@ -143,7 +143,8 @@ def create_qa_encode(vttqa_path, vocab_path, answerset_path,
     def _encode_answer(row):
         """Map answer to category id."""
         answers = row['answer']
-
+        print(answers)
+        print(type(answers))
         # to be modified
         answer_id = [answerset[answerset == answer].index[0] for answer in answers]
 
