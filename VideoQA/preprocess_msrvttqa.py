@@ -25,8 +25,8 @@ def extract_vgg(video_directory):
         for i in range(0, 10000):
             video_path = os.path.join(
                 video_directory,  str(i) + '.mp4')
-            print('[VGG]', video_path)
             if os.path.isfile(video_path):
+                print('[VGG]', video_path)
                 vgg_features.append(extractor.extract(video_path))
             # print(vgg_features[-1])
     return vgg_features
@@ -45,8 +45,8 @@ def extract_c3d(video_directory):
         for i in range(0, 10000):
             video_path = os.path.join(
                 video_directory, str(i) + '.mp4')
-            print('[C3D]', video_path)
             if os.path.isfile(video_path):
+                print('[C3D]', video_path)
                 c3d_features.append(extractor.extract(video_path))
             # print(c3d_features[-1])
     return c3d_features
@@ -175,7 +175,7 @@ def main():
     #                 '../data/msrvtt_qa/word_embedding.npy')
 
     # 用列表式数据集
-    create_qa_encode(sys.argv[1],
+    create_qa_encode('../data/msrvtt_qa/',
                      '../data/msrvtt_qa/vocab.txt',
                      '../data/msrvtt_qa/answer_set.txt',
                      '../data/msrvtt_qa/train_qa_encode.json',
