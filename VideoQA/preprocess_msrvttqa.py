@@ -122,6 +122,7 @@ def create_qa_encode(vttqa_path, vocab_path, answerset_path,
     # remove question whose answer not in answer set
     answerset = pd.read_csv(answerset_path, header=None)[0]
     drop_list = [index for index, row in train_qa.iterrows() if not_all_in(row['answer'], answerset)]
+    print(drop_list)
     train_qa = train_qa.drop(drop_list)
     val_qa = pd.read_json(os.path.join(vttqa_path, 'val_qa.json'))
     test_qa = pd.read_json(os.path.join(vttqa_path, 'test_qa.json'))
@@ -143,8 +144,8 @@ def create_qa_encode(vttqa_path, vocab_path, answerset_path,
     def _encode_answer(row):
         """Map answer to category id."""
         answers = row['answer']
-        print(answers)
-        print(type(answers))
+        # print(answers)
+        # print(type(answers))
         # to be modified
         answer_id = [answerset[answerset == answer].index[0] for answer in answers]
 
