@@ -73,7 +73,7 @@ def create_answerset(trainqa_path, answerset_path):
     train_qa = pd.read_json(trainqa_path)
     # print(train_qa)
     answer_freq = train_qa['answer'].value_counts()
-    answer_freq = DataFrame(answer_freq.iloc[0:1000])
+    answer_freq = DataFrame(answer_freq.iloc[0:10000])
     answer_freq.to_csv(answerset_path, columns=[], header=False)
 
 
@@ -172,28 +172,28 @@ def main():
     if not os.path.isdir('../data/msrvtt_qa'):
         os.makedirs('../data/msrvtt_qa')
     # 服务器上跑
-    extract_video_feature('../data/train',
-                          '../data/msrvtt_qa/video_feature_20.h5')
+    # extract_video_feature('../data/train',
+    #                       '../data/msrvtt_qa/video_feature_20.h5')
 
     # 用逐条式数据集
-    # create_answerset('../data/msrvtt_qa/train_qa.json',
-    #                  '../data/msrvtt_qa/answer_set.txt')
+    create_answerset('../data/msrvtt_qa/train_qa.json',
+                     '../data/msrvtt_qa/answer_set.txt')
 
-    # create_vocab('../data/msrvtt_qa/train_qa.json',
-    #              '../data/msrvtt_qa/answer_set.txt',
-    #              '../data/msrvtt_qa/vocab.txt')
+    create_vocab('../data/msrvtt_qa/train_qa.json',
+                 '../data/msrvtt_qa/answer_set.txt',
+                 '../data/msrvtt_qa/vocab.txt')
 
-    # prune_embedding('../data/msrvtt_qa/vocab.txt',
-    #                 'util/glove.6B.300d.txt',
-    #                 '../data/msrvtt_qa/word_embedding.npy')
+    prune_embedding('../data/msrvtt_qa/vocab.txt',
+                    'util/glove.6B.300d.txt',
+                    '../data/msrvtt_qa/word_embedding.npy')
 
     # 用列表式数据集
-    create_qa_encode('../data/msrvtt_qa/',
-                     '../data/msrvtt_qa/vocab.txt',
-                     '../data/msrvtt_qa/answer_set.txt',
-                     '../data/msrvtt_qa/train_qa_encode.json',
-                     '../data/msrvtt_qa/val_qa_encode.json',
-                     '../data/msrvtt_qa/test_qa_encode.json')
+    # create_qa_encode('../data/msrvtt_qa/',
+    #                  '../data/msrvtt_qa/vocab.txt',
+    #                  '../data/msrvtt_qa/answer_set.txt',
+    #                  '../data/msrvtt_qa/train_qa_encode.json',
+    #                  '../data/msrvtt_qa/val_qa_encode.json',
+    #                  '../data/msrvtt_qa/test_qa_encode.json')
 
 
 if __name__ == '__main__':

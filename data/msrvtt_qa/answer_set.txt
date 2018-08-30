@@ -1,1000 +1,1276 @@
 standing
 indoor
 black
-sitting
 white
+sitting
 blue
+residence
 in house
 red
-residence
 drinking water
 green
-chair
 cup
-clothes
 yellow
 table
-kitchen
-living room
-eating
 computer
+clothes
 dark blue
-grey
-on table
-book
+eating
+chair
+living room
+kitchen
 milk white
-in living room
-creamy white
-gray
-talking
-bedroom
-purple
-speaking
-brown
-pink
-walking
-inside house
-glasses
-pillow
-in bedroom
-pot
+on table
 light blue
-in kitchen
-hat
-in room
-bottle
-short hair
+book
+speaking
+pink
+purple
+grey
+bedroom
+inside house
 mirror
-desk
-sneezing
-opening door
-sofa
+talking
+walking
+pot
+creamy white
+in kitchen
+brown
+long hair
+in living room
 cabinet
-bright red
-indoors
-aterrimus
+outdoor
+gray
+refrigerator
 tidying
 lying
-phone
-bed
-in door
-long hair
-playing cell phone
-chatting
-outdoor
-house
-furvous
-orange
-dark black
-watching tv
-closet
-cell phone
-playing computer
-resting
-dark grey
-on wall
-on ground
-plate
-cooking
-refrigerator
-two
-dark green
-dark red
-room
-closing door
-taking off clothes
-man
-playing phone
-dancing
-light gray
-singing
-running
-clearing up
-on stairs
-shoes
-car
-off-white
-light grey
-towel
-crimson
-door
-bag
-tv
-light green
-sleeping
-male
-blanket
-box
 grass green
-shelf
-microphone
-laptop
-sky blue
-mouse
-looking into mirror
-taking off shoes
-pure black
+sofa
+playing cell phone
+in bedroom
+sneezing
+closet
+bright red
+dancing
+indoors
+chatting
+clearing up
+pillow
+bottle
+cell phone
+taking off clothes
+two
+aterrimus
+in door
+door
+in room
+opening door
+desk
+dark grey
+running
 painting
-tree
-sweeping floor
 bowl
-dark brown
-pouring water
-reading book
-woman
+on wall
+crimson
 reading
-writing
-on sofa
-lamp
-opening refrigerator
-on bed
-dark-blue
-violet
-paper
-taking things
-dog
-light yellow
-milky white
-bathroom
-curtain
-pool
 carton
-dark gray
+on stairs
+dark red
 washing machine
-beige
 television
-navy blue
-in car
-taking clothes
-royal blue
-toilet
-looking in mirror
-cyan
-looking at computer
-corridor
-on stage
-switch
-performing
-eating bread
-stairs
-azure
-quilt
-eating things
-photo frame
-photo
-water cup
-playing games
-three
-people
-rose red
-light-blue
-on desk
-bucket
-broom
-english
-gray white
-mustache
-guitar
-light red
-female
-playing mobile phone
-food
-cleaning
-cleaning up
-beige white
+car
+sky blue
+furvous
+phone
+glasses
+dark green
+short hair
+hat
+bed
+shoes
+off-white
+playing phone
+towel
+shelf
+tree
 taking cup
-putting on clothes
-yes
-left hand
-reading books
-carpet
-dark purple
-in bathroom
-lying down
-on chair
-driving
-window
-smalt
-on floor
-camera
-public place
-hearth
-squatting
-pen
-right hand
-hanger
-sky-blue
-taking shoes
-sitting down
-studio
-having rest
-light white
-paper box
-baby blue
-putting on shoes
-khaki
-water
-vacuum cleaner
-watching computer
-taking photos
-in studio
-turning on light
-remote control
-clock
-socket
-light pink
-explaining
-on road
-putting things
-watch
-stage
-snacks
-laughing
-laundry detergent
-jar
-light purple
-lawn
-dark yellow
-drinking
-golden
-placing items
-helmet
-marine blue
-black blue
-lavender
-dark-red
-lake blue
-outdoors
-on cabinet
-wearing clothes
-azure blue
-doorway
-on
-on shelf
-brownish yellow
-deep purple
-atrovirens
-open
-stool
-on street
-earphone
-case
-ash black
-taking phone
-silver
-exercising
-keyboard
-light
-throwing clothes
-taking book
-fetching things
-microwave oven
+light red
+on ground
+beige
+switch
+writing
+taking things
+taking clothes
+singing
+taking off shoes
+room
+plate
+sleeping
 taking pillow
-taking medicine
-mobile phone
-wearing shoes
-basket
-person
-poster
-taking something
-knife
-in corridor
-looking at mirror
-light brown
-bread
-throwing pillow
-playing guitar
-grey white
-off white
-plastic bag
-four
-cat
-turquoise
-vase
-claybank
-holding pillow
-gray black
-modena
-taking towel
-notebook
-clothing
-skyblue
-ring
-backpack
-taking pictures
-getting up
-tan
-opening cabinet
-calling
-looking for something
-putting cup
-watching videos
-wardrobe
-toy
-wiping table
-beverage
-eating something
+light green
+house
+male
+light gray
+pure black
+performing
+microphone
+quilt
+on floor
+microwave oven
+english
+orange
+putting on clothes
+people
 cap
-ocean blue
-necklace
-one
-sheet
-doll
-display
-basin
-pure white
-watching video
-silver grey
-calendar
-dark-grey
-orange red
-playing
-in water
-watching phone
-newspaper
-spoon
-looking at phone
-grey black
-audience
-oven
-taking bag
-pumpkin
-medium yellow
-rose
-coffee
-making call
-gun
-true red
-rice white
-playing basketball
-opening box
-taking blanket
-field
-bottle green
-grey and white
-hanging on wall
-orange yellow
-eyeglasses
-steering wheel
-putting away things
-utility room
-on lawn
-typing
-drinking beverage
-in hands
-pale pink
-light black
-plastic bottle
-washing clothes
-taking off coat
-no
-cartoon
-big red
-rectangle
-magazine
-folding clothes
-fan
-animal
-in cabinet
-smiling
-flower
-faint yellow
-wrestling
-tablecloth
-hands
-posing
-light-grey
-grayish white
-horse
-putting down something
-stirring
-left
-court
-kettle
-mural
-going downstairs
-undressing
-pure-black
-blue-black
-child
-creamy-white
-wall
-taking photo
-shovel
-pale green
-fresco
-putting down cup
-magenta
-electric wire
-table lamp
-climbing stairs
-turning off light
-turning on lights
-can
-in hand
-introducing
-milk-white
-gymnasium
-tangerine
-putting clothes
-jumping
-making up
-horizontal
-taking bottle
-cellphone
-seat
-cartoon character
-behind door
-fruits
-lights
-blue and black
-tie
-light-yellow
-going upstairs
-frame
-staircase
+light grey
+violet
 right
-jacinth
-earthy yellow
-turning off lights
-shooting
-washing hands
-sapphire blue
-taking food
-glass
-opening cabinet door
-relaxing
-curly hair
-changing clothes
-on washing machine
-warehouse
-desk lamp
-beach
-turning around
-army green
-lemon yellow
-cupboard
-sheets
-in washing room
-wathet
-opening window
-fighting
-studying
-making phone call
-football field
-golden yellow
-bike
-closing refrigerator
-at table
-having match
-cloth
-picking up pillow
-peach red
-ball
-pale grey
-taking computer
-closing window
-placing clothes
-opening
-standing up
-besom
-opening closet
-pale blue
-closed
-turning on computer
-grass
-moving
-six
-wiping nose
-having meal
-egg
-pale yellow
-road
-shampoo
-pan
-washroom
-black-blue
-pants
-screen
-golden-yellow
-telephone
-electric fan
-drinking milk
-dressing up
-in toilet
-opening refrigerator door
-playing field
-plant
-lifting cup
-dishes
-silver gray
-silvery gray
-taking rest
-word
-turning off computer
-human
-making speech
-pea green
-ivory-white
-throwing book
-banana
-daytime
-cloakroom
-eating food
-scarlet
-brown green
-dark-black
-bicycle
-in closet
-fuchsia
-hangers
-basketball court
-auditorium
-cleaner
-brownish red
-books
-on door
-shirt
-handbag
-black grey
-on stool
-tool
-on grass
-gray-black
-walking around
-fruit
-looking at things
-suburb
-putting down clothes
-having conversation
-sea blue
-round
-putting away clothes
-square
-competing
-reseda
-throwing shoes
-curtains
-croci
-fence
-jasper
-taking broom
-vegetables
-purple red
-bolster
-placing cup
-taking books
-eating snacks
-kneeling
-bookcase
-medicine
-drawing curtain
-earphones
-taking out items
-playing football
-light-green
-mopping floor
-brown-black
-tidying clothes
-rose-bengal
-toothbrush
-moving chair
-putting food
-brush
-cushion
-on cupboard
-curly
-bowel
-detergent
-using vacuum cleaner
-couch
-cups
-pictures
-screwing bottle cap
-chopping board
-throwing things
-scarf
-bright-red
-putting away stuff
-interviewing
-taking selfie
-dining
-brown yellow
-doing cleaning
-park
-shelter
-drawing
-trash can
-brownish black
-amaranth
-light cyan
-in corner
-hand
-horizontally
-swimming
-back cushion
-earth yellow
-skirt
-washing cup
-on cooktop
-in sky
-in hallway
-folding towel
-folding towels
-toilets
-purplish red
-dessert
-blankets
-soft red
-closing refrigerator door
-narrating
-reading messages
-denim blue
-athlete
-black gray
-microwave
-driving car
-cleaning window
-ater
-pink red
-headset
-tv set
-game scene
-picture
-emerald green
-meat
-bosom
-player
-black and white
-closing closet
-opening computer
-picking up book
-rag
-wiping hands
-ash gray
-vacuum
-playing computer games
-corner of wall
-clapping hands
-sunglasses
-piano
-sliver white
-stairwell
-baby-blue
-number
-vermilion
+royal blue
+putting things
+three
+wiping table
+in car
+navy blue
+open
+golden
+laughing
+keyboard
+playing computer
+paper
+dark-blue
+light-blue
+cyan
+tv
+throwing clothes
+on
+dark brown
+box
+turning on light
+baby blue
+mouse
+calendar
+person
+resting
+curtain
+creamy-white
+dark yellow
+stage
+cleaning up
+laundry detergent
+azure blue
+public place
 taking box
-doing chores
-peak green
-saffron
-wiping mirror
-peach
-picking up clothes
-seeing information
-in cupboard
-washbasin
-broadcasting
-hanging clothes
-balloon
-glass bottle
-game
-on steps
-umbrella
-seasoning
-puppy
-screwing cap
-blue purple
-putting towel
-tibetain blue
-plastic bucket
-light-red
-mop
+necklace
+dark gray
+taking blanket
+bag
+blue-black
+smalt
+opening cabinet
+taking book
+right hand
+pool
+holding pillow
+light pink
+azure
+exercising
+taking something
+pouring water
+lamp
+female
+dog
+putting away stuff
+looking in mirror
+blanket
+looking at phone
+toilet
+dark black
+making call
+plastic bottle
+playing
+sweeping floor
+on shelf
+washing hands
+vase
+lights
+going upstairs
+food
+pure-black
+closing refrigerator
+on sofa
+basin
+left hand
+socket
+mustache
+dark-red
+orange red
+on lawn
+climbing stairs
+light yellow
+beige white
+watching phone
+playing games
+toy
+brownish yellow
+wearing clothes
+one
+left
+water
+court
+turquoise
+laptop
+typing
+taking phone
+folding clothes
+electric fan
+sky-blue
+grey and white
+reading book
+bottle green
+vacuum cleaner
+milky white
+big red
+mobile phone
+horizontal
+taking photo
+looking into mirror
+eating things
+ocean blue
+light white
+deep purple
+audience
+black-blue
+lying down
+watching tv
+putting on shoes
+woman
+driving
+squatting
+broom
+on road
+on desk
+rose red
+sheet
+having rest
+cleaning
+pen
+bucket
+lawn
+water cup
+animal
+kneeling
+having match
+opening refrigerator
+oven
+bathroom
+auditorium
+vegetables
+in corridor
+making speech
+pale grey
+on stool
+light purple
+earphone
+onion
+no
+photo frame
+fan
+playing football
+grey white
+grass-green
+curly
+playing table tennis
+silver grey
 mattress
-clapping
-playground
-taking plate
-silvery white
-taking out clothes
-purplish blue
-in game
-armrest
-earrings
-plates
-corner
-holding cup
-stone
-next to car
-water bottle
-flying
-cleaning table
-placing shoes
-five
-putting down book
-rubbing nose
-taking bread
-machine
-introducing car
-putting on coat
-playing game
-placing plate
-armrests
-water tap
-vegetable
-boat
-flour
-putting computer
-cleaning floor
-bringing bottle
-nodding
-washing dishes
-tissue
-opening bag
-grass yellow
-placing stuff
-taking exercise
-zipping
-faint red
-covering blanket
-firming
-decoration
-making meals
-by river
-arranging items
-restaurant
-getting dressed
-trousers
-tire
-apricot red
-cage
-forest
-theatre
-motorcycle
-buff
-folding paper
-bed sheet
-doing homework
-storage room
-washing sink
-doing some cleaning
-saucer
-trash bin
-hugging
-laundry room
-stopped
-tap
-close stool
-fashion show
-page turning
-basketball hoop
-blue white
-next to door
+in bathroom
+egg
+sea blue
 blackboard
-blue black
-taking kettle
-flashlight
-waving
-hidden blue
-remote controller
-wrist watch
-on refrigerator
-dialog box
-take things
-tray
-plastic box
-hovel
-royalblue
-showing
-cleaning away rubbish
-ivory
-brown red
-blue green
-seven
-program scene
-drum set
-at corridor
-burgandy
-on court
-magnet
-flesh color
-closing cabinet door
-on snow mountain
-pure-white
-putting down towel
-looking outside window
-peachblossom
-watching television
-opening bottle
-pouring laundry detergent
-putting broom
-going out
-floor
-lunch box
-taking plates
-handrail
-rabbit
-monster
-viridis
-photograph
-jacket
-sliver grey
-apron
-turning on washing machine
-incanus
-circle
-touching head
-telestudio
-teaching
-dumbbell
-going up stairs
-vehicle
-putting down pillow
-kitchen table
-going down stairs
-bookshelf
-yard
-wiping face
-apple green
-pair of shoes
-jade green
-touching hair
-slivery
-snow mountain
-throwing towel
-stove
-cleaning up dust
-touching face
-opening washing machine
-dark-purple
-mat
-basketball
-putting shoes
-morning
-in building
-saffron yellow
-wiping door
-skiing
-wash basin
-countertop
-washer
-wiping desk
-clearing up stuffs
-drinking juice
-shaking hands
-medium gray
-playing cellphones
-operating computer
-gloves
-off
-giving lecture
-playing piano
-screwdriver
-pigment
-stick
-fish tank
-making food
-earthy-yellow
-watermelon red
-reading newspaper
-school
-putting on blanket
-company
-picking up things
-bracelet
-going for drive
-placing things
-fire extinguisher
-clothes hanger
-khaki color
-drawing curtains
-snake
-cooking things
-bring cup
-dark-yellow
-picture frame
-grey-white
-hugging pillow
-cleaning mirror
-guardrail
-sitting up
-wooden table
-cleaning ground
-blue gray
-watching movie
-baby
-inside building
-in refrigerator
-riding bike
-shaking towel
-on hearth
-dusty gray
-closing cupboard door
-putting book
-carrying backpack
-black-brown
-medal
-blue grey
-national flag
-medium grey
-decorative painting
-tourist attractions
-tidying up room
-bear
-sorting clothes
-acting
-taking pot
-triangle
-earring
-getting bag
-mountain
-sword
-wiping mouth
-looking at cellphone
-cushions
-seated
-swinging
-safety belt
-waste container
-throwing something
-gas tank
-sunshade
-taking magazine
-pulling pants up
-plastic case
-bright yellow
-picking up carton
-in front of table
-chicken
-on runway
-arrow
-taking selfies
-on playground
-brick
-music score
-in cup
-actor
-taking quilt
-in laundry room
-falling down
-document
-talking on phone
-handle
-dusting
-drinking things
-finishing
-stadium
-paying
-platform
-taupe
-putting items
+kettle
 blue-gray
-turning over book
-light switch
-soap box
-doing laundry
-peachpink
-in stairwell
-parts
-in river
-book and periodical
-on closet
-gas stove
-taking besom
-street
-pink purple
-kissing
-suit
-cabinet door
-classroom
-model
-card
-wooden chair
-opening book
-placing something
-washing pot
-dresser
+milk-white
+placing items
+at table
+jacinth
+taking shoes
+corridor
+introducing
+putting away things
+drinking milk
+making phone call
+chopping board
+mopping floor
+3d
+looking at computer
+match
+paper box
+cartoon character
+taking exercise
+clothing
+hearth
+jumping
+wire
+taking food
+banana
+frame
+swimming
+peachblossom
+stopped
+washing clothes
+closing window
+game scene
+steering wheel
+clock
+besom
+bright-red
+turning off computer
+hair dryer
+man
+going up stairs
+claybank
+socks
+photo
+cooking
+cellphone
+gun
 observing photo frame
+golden yellow
+pink-red
+earth yellow
+turning on computer
+modena
+bolster
+watching video
+doing cleaning
+picking up something
+lifting curtain
+saffron
+putting down something
+pumpkin
+forest
+placing shoes
+jar
+rose
+display
+dark-grey
+denim blue
+taking pictures
+beverage
+paper bag
+pale blue
+case
+on grass
+taking towel
+mop
+turning up light
+opening closet
+remote control
+pair of shoes
+yes
+light
+explaining
+sitting down
+silvery gray
+fashion show
+eating something
+light-grey
+studio
+in studio
+wearing shoes
+guitar
+on bed
+putting book
+black blue
+rectangle
+gray white
+calling
+taking computer
+opening box
+taking besom
+marine blue
+cleaning window
+walking around
+dressing
+corner of wall
+newspaper
+hands
+in hallway
+light brown
+guardrail
+eating bread
+taking rest
+playing field
+throwing shoes
+holding cup
+wrestling
+moving chair
+plastic bags
+magenta
+staircase
+medicine bottle
+light-yellow
+moving
+tidying blanket
+throwing basketball
+putting telecontroller
+picking clothes
+opening window
+turned on
+in city
+showing book
+opening wardrobe
+on snow mountain
+capitol model
+climbing
+stepping in front of desk
+picking up pillow
+looking out window
+putting down clothes
+zipping
+opening computer
+on screen
+shorthair
+golden earring
+wooden bench
+watching matches
+faucet
+liquid detergent
+handbag
+businessman
+straight
+in machine
+closing carton
+going downstairs
+leaning against
+cushion
+looking through bags
+nodding
+grass
+human organ
+copying
+opening up box
+taking out of something
+cutting food material
+class
+taking wrench
+placing plates
+dark cyan
+holding up plate
+hint
+in running
+clear liquid
+putting down phone
+fruit
+blue and white
+rustic brown
+cylindrical water vat
+bending
+folding towel
+sanding
+mountaineering bag
+putting box
+hidden blue
+runway four
+snow mountain
 on hanger
-taking camera
-lacteous
-bridge
+computer mainboard
+washing things
+on snowfield
+lavender
+lake surface
+hug
+eating biscuit
+creeping
+horse
+headless
+snake
+meat
+eyeglasses
+pointing to toy description
+putting down computer
+decorative painting
+behind iron net
+wheelchair
+on carpet
+on water tank
+holding up water cup
+walking toward door
+beautiful green
+on glass
+light-purple
+placing book
+stool
+holding vacuum cleaner
+getting up
+screwdriver
+opening boxes
+on cupboard
+canary yellow
+park
+pulling bolt
+pulling pants down
+pure-white
+dishes
+auto show
+grey green
+taking boxes
+in game
+turning lights on
+washing sink
+trotting
+shaking
+baton
+sponge
+measuring
+getting bangs
+brown and grey
+placing clothing
+opening cartons
+four
+turning book
+taking up box
+waving towel
+knapsack
+building
+vertical
+in corner
+grass yellow
+cleaning up trash
+bear
+taking sheet
+blowing nose
+watermelon red
+rushing
+t-shirts
+closing refrigerator door
+foot pad
+taking medicine
+on boat
+singing live
+in game site
+drinking juice
+water red
+driving car
+getting clothes
+document
+in repair
+mark cups
+looking outside window
+picking shoes
+stone
+juicer
+wearing hat
+rearcamera
+being hibernation
+zipping up
+throwing garbage
+grayish white
+rice ladle
+on tea table
+laundry room
+round earrings
+eating popcorn
+having dinner
+baby stroller
+toilets
+combing
+by windows
+looking at gas tank
+going on steps
+horizontally
+player
+mulberry
+in space
+on tiles
+by competition terrain
+square
+recording
+closed
+sink
+coffee color
+glove
+skyblue
+football field
+brandish towel
+making research
+taking off headphones
+holding bottle
+taking mat
+taking on his coat
+incanus
+bamboo basket
+child
+putting blanket
+protective shield
+drinking
+watching game
+pendulum table
+stairs
+chatting about car
+making dishes
+at evening
+daytime
+rehearsaling
+in carport
+vegetable
+taking off his clothes
+protective hood
+answering question
+food is hot
+tan
+at stair hall
+synchronized swimming
+placing stuffs
+cooking meals
+vegetable market
+getting foods
+baby-blue
+watching film
+putting down plates
+theatre
+opening paper box
+having class
+earthy-yellow
+on chopping board
+drinking things
+on door knock
+picture
+accident
+closing drawer
+cloakroom
+preparing to fishing
+blue green
+shower room
+tie
+blue gray
+rice white
+on face
+scratching
+gloves
+atrovirens
+residential
+throwing something
+on hearth
+gray black
+pedestrian
+electric wire
+program scene
+standing akimbo
+nail polish
+slippers
+opening cabinet door
+putting down things
+vacant lot
+sitting on ground
+on board
+shampoo
+storing food
+grooming
+racing car
+per cent
+outdoors
+finding clothes
+light-orange
+looking at wall
+commode
+tunnel
+jars
+walking out
+bowls and dishes
+lamps
+washing shoes
+cleaning up desk
+curved
+turning
+taking ingredients
+lifting cup
+fetching newspaper
+washbasin
+foods
+hook
+cannon
+saffron yellow
+playing with pet
+taking photos
+installing bulb
+pants
 visiting
+khaki
+pouring water to another cup
+rugby
+skiing equipment
+catwalk
+adjusting cooking fire
+cutting crab
+pitch black
+jade green
+throwing box
+purplish-blue
+lifting certain
+drawing eyebrow
+placing cup
+serving food
+taking bath
+pulling out power
+rolling eyes
+washroom
+wiping chair
+broadcasting station
+folding towels
+filtering water
+opening
+electronic bike
+strolling
+vacuuming
+tissue
+screen
+being injured
+switching hands
+faint yellow
+year twenty o eight
+seat cushion
+small tree
+cooktop
+cleaner
+taking on clothes
+kneading dough
+hangers
+picking up items
+glass
+cashmere hat
+tank
+moving boxes
+camera
+placing clothes
+ivory-white
+looking for something
+silver black
+getting shoes
+looking at camera
+opening refrigerator door
+purse
+blue grey
+basketball stands
+in pool
+mountain
+touching grass
+watching mobile phone
+grey black
+relaxing
+pale brown
+wiping nose
+placing bag
+clapping
+repairing
+green belt
+icon
+in hands
+football
+washing cup
+clearing up stuffs
+dark-black
+curly hair
+rubbing nose
+sliding door bolt
+getting cup
+glue
+having meal
+in cloakroom
+safety belt
+scarf
+warehouse
+at top of house
+easel
+on carton
+next to man
+ladder
+stirring pigment
+beside sound
+on desert
+taking off coat
+royalblue
+sapphire blue
+brown green
+hair clasp
+on head
+saucer
+wiping his hair
+host
+on washing machine
+looking outside of window
+take photos
+bookcase
+on tall building
+accepting interview
+basketball
+turning off tv
+burgandy
+placing carton
+sheets
+drink
+wiping door
+shaking hands
+wolf
+on pole
+chopping monster
+drilling nails
+school bus
+throwing books
+watching things
+brand
+cartoon painting
+colour
+pavement
+seasoning
+photography
+ship
+dog house
+putting in box
+drawing
+undressing
+taking jacket
+putting down brooms
+cleaning desktop
+collating wardrobe
+shaking leg
+grey-green
+sound
+celebrating
+warning tape
+on top of mountain
+in public
+glass bottle
+handrail
+putting planet
+ice chest
+shooting game
+mural
+asia
+yawning
+coriander
+putting down bag
+gasoline
+cyan green
+playing piano
+five-pointed star
+dresser
+holding pen
+holding on table
+drinker water
+red cloth bag
+printer
+table lamp
+six
+doorway
+lifting bucket
+off white
+ivory
+seeing photos
+shake left and right
+orchid sample
+peach-pink
+cosmetics
+moon
+ketchup
+hamster
+can
+pulling cord
+throwing cushions
+grid
+touching
+classroom
+going to living room
+repairing home appliances
+plastic box
+tangerine
+beside platform
+wardrobe
+edible oil
+suburb
+bread
+bicycle
+in sea water
+tool rack
+ash black
+monkey
+sandals
+on stage
+chandelier
+ring finger
+tidying things up
+shovel
+seat
+kitchen table
+throwing rag
+packing something
+beer
+making phone calls
+closing medicine bottle
+taking bowel
+reding
+operating computer
+desk lamp
+brown gray
+throwing pillow
+entering bedroom
+cups
+tying shoelace
+riding bike
+claping
+year two thousand and eight
+armrests
+opening fridge door
+mickey
+on sport court
+closing door of closet
+playing computer games
+puppy
+illumination
+picking up water cup
+checking door
+making mv
+plastic
+training ground
+playing guitar
+approaching door
+holding demonstration
+on playground
+crumbling paper
+golden-yellow
+introducing car
+spider
+blankets
+skiing
+playing and fighting
+light black
+cap pistol
+gas cooker
+firming
+platform
+on show
+playing basketball
+grill
+belt
+touching forehead
+waiting
+checking parts
+plastic case
+backpack
+playing magic cube
+pistol
+touching rabbit
+giraffe
+opening drawer
+headset
+sorting clothes
+taking cleaner
+light switch
+putting seasoning
+cartoon
+pouring juice
+closing door
+on chair
+moving computer
+school
+hair drier
+throwing towel
+pouring things
+finishing clothes
+black-brown
+blue black
+on mountain road
+watching computer videos
+display items
+turning off lights
+window
+participating in competition
+playing tablet
+passageway
+laundry
+going to table
+seawater
+faint red
+dialog box
+field
+air conditioner
+coffee
+cleaning shoes
+opening gas tank
+ground
+displaying toys
+having interview
+fleshed-color
+putting items
+ball
+handrails
+placing bottle
+drinking beverage
+reporting
+in water
+behind door
+moving his feet
+true red
+looking at picture
+perfume
+morning
+closing cabinet
+beige color
+giving food to partner
+athletes
+in broadcasting room
+tidying cabinet
+putting on face cloth
+medicine
+swimming pool
+in front of closet
+showing
+bottles
+putting towel
+judge
+introducing european futures
+seasoner
+giving lecture
+talking about
+hair braiding
+disk
+on sea
+silvery
+looking at washing machine
+in wardrobe
+organizing clothes
+word
+pan
+program
+tasting dishes
+pea green
+drawing curtain
+in river
+workroom
+land
+riding motorcycle
+on cooktop
+putting plate
+stroller
+rag
+cloud
+chewing
+handing into pot
+reading books
+dark purple
+looking at mirror
+table tennis table
+taking two bowls
+standnig
+regimentals monkey suit
+storage rack
+catwalk show
+at door
+blue purple
+removing lamp cover
+taking pants
+students vehicles
+playing rubik's cube
+pure blue
+refreshing
+looking after bird
+brown stripe shirt
+grandma gray
+baking sausage
+spring cleaning
+swallowing
+splashing water
+playing mobile phone
+phones
+communicating
+taking bottle
+water pipe
+doll
+taking bag
+having conversation
+guitarist bass
+taking water glass
+red brown
+electronic clock
+closing cupboard door
+mess tin
+peach pink
+decoration
+smiling
+looking for clothes
+taking bowl
+greyish white
+pressing pillow
+pair od pants
+sliver grey
+on guitar
+billboard
+whisk
+taking bread
+steel helmet
+firing
+cloth
+cat
+putting bag in order
+food can
+condiment
+stick
+standing up
+schoolbag
+fruits
+watching television
+picking flowers
+in washing machine
+silver gray
+film editing network
+true-black
+cleaning floor
+sweeping
+putting broom
+suit
+helmet
+counting eggs
+lakeside
+opening lid of bottle
+toothbrush
+pigment
+peach
+repairing door
+indigo blue
+grabbing food
+medium yellow
+throwing food
+outside store
+open space
+folding blanket
+statue
+in mouth
+black green
+lake blue
+locker
+opening microwave
+bring cushion
+tidying up desk
+embracing
+orange yellow
+putting computer
+sunglasses
+fillingfood
+utility room
+parts
+giving speech
+reading magazine
+clearing barrier
+wiping sunscreen
+eggplant purple
+taking washing powder
+in toilet
+clapping hands
+reaching out
+basket
+axis
+silvery white
+checking table
+protective cover
+corner
+repair car
+trash can
+boat
+detergent
+thinking
+bench
+holding bag
+watch
+bring cup
+countertop
+taking scarf
+ambry
+playing plants vs zombies
+on computer desktop
+earthy yellow
+dashboard
+in front of table
+fire extinguisher
+taking screwdriver
+gps
+on washbasin
+take things
+dancer
+opening book
+on left hand
+sitting up
+folding trousers
+bringing bottle
+chopping potato
+fish bowl
+sewing machines
+bringing photo
+in man's hand
+on computer
+studios
+character
+game screen
+celebration ceremony
+something horrible
+making food
+arranging items
+paying
+shoveling soil
+guard bar
+matching
+putting down broom
+doing homework
+placing sundries
+taking out things
+rose-bengal
+smileing
+eating food
+doing sports
+arranging sundries
+competitor
+taking remote control
+placing backpack
+peachpink
+water bottle
+putting down pillow
+turning on lights
+fuchsia
+cavity knight
+columns
+cleaning phone
+game characters
+gripping steering wheel
+in dining room
+dessert
+fish
+wiping glasses
+covering with cover
+plastic bag
+microwave
+statistical chart
+pale pink
+fetching things
+tissue box
+broadcasting
+rose bloom
+croci
+removing glass bottle
+studying
+preparing food
+electronic
+chicken
+teacher
+on dialog box
+observing carton
+long jump
+bags
+air conditioning
+cinema
+cleaning close stool
+viewing screen
+grey-blue
+hats
+amusing cat
+second line
+apricot red
+shaking basin
+wathet
