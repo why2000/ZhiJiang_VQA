@@ -66,7 +66,7 @@ def train(epoch, dataset, config, log_dir):
                 feed_dict = {
                     model.video_feature: np.add(vgg, c3d) / 2,
                     model.question_encode: question,
-                    model.answer_encode: answer
+                    model.answer_encode: [a[0] for a in answer]
                 }
                 _, loss, acc = sess.run(
                     [model.train, model.loss, model.acc], feed_dict)
@@ -237,7 +237,7 @@ def main():
             config['train']['batch_size'], config['preprocess_dir'])
     elif args.dataset == 'msrvtt_qa':
         dataset = dt.MSRVTTQA(
-            config['train']['batch_size'], config['preprocess_dir'])
+            config['train']['batch_size'], config['preprocess_dir'], config['model']['answer_num'])
 
     if args.mode == 'train':
         best_val_acc = -1

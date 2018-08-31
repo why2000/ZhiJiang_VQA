@@ -4,7 +4,7 @@ import os
 import pandas as pd
 import numpy as np
 import tables
-
+from sklearn.utils import shuffle
 
 class MSVDQA(object):
     """Use bucketing and padding to generate data batch.
@@ -164,12 +164,13 @@ class MSRVTTQA(object):
     All questions are divided into 5 buckets and each buckets has its length.
     """
 
-    def __init__(self, train_batch_size, preprocess_dir):
+    def __init__(self, train_batch_size, preprocess_dir, answer_num):
         """Load video feature, question answer, vocabulary, answer set.
 
         Note:
             The `train_batch_size` only impacts train. val and test batch size is 1.
         """
+        self.answer_num = answer_num
         self.train_batch_size = train_batch_size
 
         self.video_feature = tables.open_file(
@@ -184,6 +185,7 @@ class MSRVTTQA(object):
             os.path.join(preprocess_dir, 'test_qa_encode.json'))
 
         # init train batch setting
+        print('max video id', max(self.train_qa['video_id']))
         self.train_qa['question_length'] = self.train_qa.apply(
             lambda row: len(row['question'].split()), axis=1)
         self.train_buckets = [
@@ -210,7 +212,7 @@ class MSRVTTQA(object):
         ]
         # upset the arise of questions of same video
         for i in range(5):
-            self.train_buckets[i] = self.train_buckets[i].sample(frac=1)
+            self.train_buckets[i] = shuffle(self.train_buckets[i])
         self.has_train_batch = True
 
         # init val example setting
@@ -227,7 +229,7 @@ class MSRVTTQA(object):
         """Reset train batch setting."""
         # random
         for i in range(5):
-            self.train_buckets[i] = self.train_buckets[i].sample(frac=1)
+            self.train_buckets[i] = shuffle(self.train_buckets[i])
         self.current_bucket = 0
         self.train_batch_idx = [0, 0, 0, 0, 0]
         self.has_train_batch = True
@@ -260,22 +262,41 @@ class MSRVTTQA(object):
         video_ids = bucket.iloc[start:end]['video_id'].values
         batch_length = self.train_batch_length[self.current_bucket]
 
-        for i in range(self.train_batch_size):
+        #print(self.video_feature.root.vgg.shape, self.train_batch_size)
+        for i in range(len(question_encode)):
+            if video_ids[i] == 1:
+                #question_batch = np.delete(question_batch, i)
+                answer_batch = np.delete(answer_batch, i)
+                continue
             qid = [int(x) for x in question_encode[i].split(',')]
             qid = np.pad(qid, (0, batch_length - len(qid)), 'constant')
             question_batch.append(qid)
-            vgg_batch.append(self.video_feature.root.vgg[video_ids[i]])
-            c3d_batch.append(self.video_feature.root.c3d[video_ids[i]])
+            #print(max(video_ids))
+            #print(type(video_ids[i]), video_ids[i])
+            vgg_batch.append(self.video_feature.root.vgg[video_ids[i] - 2])
+            c3d_batch.append(self.video_feature.root.c3d[video_ids[i] - 2])
 
         self.train_batch_idx[self.current_bucket] += 1
         # if current bucket is ran out, use next bucket.
+        # print('batch_idx', self.train_batch_idx[self.current_bucket])
+        # print('current_bucket', self.current_bucket)
+        # print(self.train_batch_total)
         if self.train_batch_idx[self.current_bucket] == self.train_batch_total[self.current_bucket]:
             self.current_bucket += 1
-
+        while self.current_bucket != len(self.train_batch_total) \
+              and self.train_batch_total[self.current_bucket] == 0:
+            # if current bucket is empty --> next bucket
+            self.current_bucket += 1
         if self.current_bucket == len(self.train_batch_total):
             self.has_train_batch = False
+        #print(len(question_batch))
+        # answer to one-hot like array
+        answer_onehot = np.zeros((len(answer_batch), self.answer_num))  
+        for i, row in enumerate(answer_batch):
+            for a in row:
+                answer_onehot[i][a - 1] = 1    
 
-        return vgg_batch, c3d_batch, question_batch, answer_batch
+        return vgg_batch, c3d_batch, question_batch, answer_onehot
 
     def get_val_example(self):
         """Get one val example. Only question is converted to int."""
@@ -285,8 +306,8 @@ class MSRVTTQA(object):
         answer = self.val_qa.iloc[self.val_example_idx]['answer']
 
         question = [int(x) for x in question_encode.split(',')]
-        vgg = self.video_feature.root.vgg[video_id]
-        c3d = self.video_feature.root.c3d[video_id]
+        vgg = self.video_feature.root.vgg[video_id - 2 if video_id != 1 else 1]
+        c3d = self.video_feature.root.c3d[video_id - 2 if video_id != 1 else 1]
 
         self.val_example_idx += 1
         if self.val_example_idx == self.val_example_total:

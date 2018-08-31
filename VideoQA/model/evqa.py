@@ -32,6 +32,7 @@ class EVQA(object):
         with tf.name_scope('input'):
             self.video_feature = tf.placeholder(
                 tf.float32, [None, self.video_feature_num, self.video_feature_dim], 'video_feature')
+            print(self.video_feature)
             self.question_encode = tf.placeholder(
                 tf.int64, [None, None], 'question_encode')
 
@@ -85,17 +86,23 @@ class EVQA(object):
         """Compute loss and acc."""
         with tf.name_scope('answer'):
             self.answer_encode = tf.placeholder(
-                tf.int64, [None], 'answer_encode')
-            answer_one_hot = tf.one_hot(
-                self.answer_encode, self.answer_num)
+                tf.float32, [None, None], 'answer_encode')
+            #answer_one_hot = tf.one_hot(
+            #    self.answer_encode, self.answer_num)
         with tf.name_scope('loss'):
             sig_loss = tf.nn.sigmoid_cross_entropy_with_logits(
-                answer_one_hot, self.logit, scope='sig_loss')
+                labels=self.answer_encode, logits=self.logit)
             reg_loss = tf.add_n(
                 tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES), name='reg_loss')
-            self.loss = sig_loss + reg_coeff * reg_loss
+            self.loss = tf.reduce_mean(sig_loss + reg_coeff * reg_loss)
         with tf.name_scope("acc"):
-            correct = tf.equal(self.prediction, self.answer_encode)
+            #correct = 0
+            #for idx in self.prediction:
+                #if self.answer_encode[idx] == 1:
+                   # correct += 1
+            
+            #self.acc = correct / len(self.prediction)
+            correct = tf.equal(self.prediction, tf.cast(self.answer_encode, "int64"))
             self.acc = tf.reduce_mean(tf.cast(correct, "float"))
 
     def build_train(self, learning_rate):
