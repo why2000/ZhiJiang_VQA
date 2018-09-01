@@ -309,7 +309,12 @@ class MSRVTTQA(object):
         if self.val_example_idx == self.val_example_total:
             self.has_val_example = False
 
-        return vgg, c3d, question, answer
+        # answer to one-hot like array
+        answer_onehot = np.zeros(self.answer_num), dtype=np.int64)
+        for index in answer:
+            answer_onehot[index - 1] = 1
+
+        return vgg, c3d, question, answer_onehot
 
     def get_test_example(self):
         """Get one test example. Only question is converted to int."""
