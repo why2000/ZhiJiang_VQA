@@ -231,7 +231,7 @@ def main():
                         help='train/test')
     parser.add_argument('--gpu', default='0',
                         help='gpu id')
-    parser.add_argument('--log', default='./log',
+    parser.add_argument('--log', default='./log_esa',
                         help='log directory')
     parser.add_argument('--dataset', choices=['msvd_qa', 'msrvtt_qa'], default='msrvtt_qa',
                         help='dataset name, msvd_qa/msrvtt_qa')
