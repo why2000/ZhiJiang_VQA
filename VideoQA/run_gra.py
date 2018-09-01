@@ -69,11 +69,22 @@ def train(epoch, dataset, config, log_dir):
                     model.question_encode: question,
                     model.answer_encode: answer
                 }
-                _, loss, acc = sess.run(
-                    [model.train, model.loss, model.acc], feed_dict)
+                _, loss, prediction = sess.run(
+                    [model.train, model.loss, model.prediction], feed_dict)
+                
+                # cal acc
+                correct = 0
+                for i, row in enumerate(prediction[1]):
+                    #print(row)
+                    for index in row:
+                        if answer[i][index] == 1:
+                            correct += 1
+                            break
+                acc = correct / len(answer)
+
                 total_loss += loss
                 total_acc += acc
-                if batch_idx % 100 == 0:
+                if batch_idx % 10 == 0:
                     print('[TRAIN] epoch {}, batch {}/{}, loss {:.5f}, acc {:.5f}.'.format(
                         epoch, batch_idx, batch_total, loss, acc))
                 batch_idx += 1
@@ -265,7 +276,7 @@ def main():
                 break
 
             train(epoch, dataset, config, args.log)
-            val_acc = val(epoch, dataset, config, args.log)
+            #val_acc = val(epoch, dataset, config, args.log)
 
     elif args.mode == 'test':
         print('start test.')

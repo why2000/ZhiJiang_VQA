@@ -200,12 +200,12 @@ class GRA(object):
         """Compute loss and acc."""
         with tf.name_scope('answer'):
             self.answer_encode = tf.placeholder(
-                tf.int64, [None], 'answer_encode')
-            answer_one_hot = tf.one_hot(
-                self.answer_encode, self.answer_num)
+                tf.int64, [None, self.answer_num], 'answer_encode')
+            # answer_one_hot = tf.one_hot(
+            #     self.answer_encode, self.answer_num)
         with tf.name_scope('loss'):
             log_loss = tf.losses.log_loss(
-                answer_one_hot, self.logit, scope='log_loss')
+                self.answer_encode, self.logit, scope='log_loss')
             reg_loss = tf.add_n(
                 tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES), name='reg_loss')
             # fix channel selection
@@ -214,8 +214,9 @@ class GRA(object):
             self.loss = log_loss + reg_coeff * reg_loss + shu_coeff * shu_loss
 
         with tf.name_scope("acc"):
-            correct = tf.equal(self.prediction, self.answer_encode)
-            self.acc = tf.reduce_mean(tf.cast(correct, "float"))
+            pass
+            # correct = tf.equal(self.prediction, self.answer_encode)
+            # self.acc = tf.reduce_mean(tf.cast(correct, "float"))
 
     def build_train(self, learning_rate):
         """Add train operation."""
