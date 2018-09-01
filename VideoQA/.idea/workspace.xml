@@ -36,14 +36,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataset.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dataset.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/util/dataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4440">
-              <caret line="300" column="15" lean-forward="false" selection-start-line="300" selection-start-column="15" selection-end-line="300" selection-end-column="15" />
-              <folding>
-                <element signature="e#27#36#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="307">
+              <caret line="312" column="58" lean-forward="true" selection-start-line="312" selection-start-column="58" selection-end-line="312" selection-end-column="58" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,14 +59,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_evqa.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run_evqa.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_evqa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="152" column="17" lean-forward="false" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
+            <state relative-caret-position="1067">
+              <caret line="250" column="68" lean-forward="true" selection-start-line="250" selection-start-column="68" selection-end-line="250" selection-end-column="68" />
               <folding>
                 <element signature="e#22#31#0" expanded="true" />
-                <marker date="1535793139277" expanded="true" signature="10061:10108" ph="..." />
               </folding>
             </state>
           </provider>
@@ -87,8 +84,8 @@
       <file leaf-file-name="preprocess_msrvttqa.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/preprocess_msrvttqa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="66" column="51" lean-forward="false" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+            <state relative-caret-position="443">
+              <caret line="151" column="30" lean-forward="true" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
               <folding>
                 <element signature="e#40#49#0" expanded="true" />
               </folding>
@@ -140,14 +137,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/util/dataset.py" />
         <option value="$PROJECT_DIR$/run_gra.py" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/preprocess_msvdqa.py" />
         <option value="$PROJECT_DIR$/TODO.md" />
         <option value="$PROJECT_DIR$/model/evqa.py" />
-        <option value="$PROJECT_DIR$/preprocess_msrvttqa.py" />
         <option value="$PROJECT_DIR$/run_evqa.py" />
+        <option value="$PROJECT_DIR$/preprocess_msrvttqa.py" />
+        <option value="$PROJECT_DIR$/util/dataset.py" />
       </list>
     </option>
   </component>
@@ -362,9 +359,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4125">
           <caret line="279" column="15" lean-forward="false" selection-start-line="279" selection-start-column="15" selection-end-line="279" selection-end-column="15" />
-          <folding>
-            <element signature="e#27#36#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -403,7 +398,6 @@
           <caret line="141" column="17" lean-forward="true" selection-start-line="141" selection-start-column="17" selection-end-line="141" selection-end-column="17" />
           <folding>
             <element signature="e#22#31#0" expanded="true" />
-            <marker date="1535793139277" expanded="true" signature="10061:10108" ph="..." />
           </folding>
         </state>
       </provider>
@@ -507,26 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preprocess_msrvttqa.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="66" column="51" lean-forward="false" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
-          <folding>
-            <element signature="e#40#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4440">
-          <caret line="300" column="15" lean-forward="false" selection-start-line="300" selection-start-column="15" selection-end-line="300" selection-end-column="15" />
-          <folding>
-            <element signature="e#27#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/evqa.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1485">
@@ -534,17 +508,6 @@
           <folding>
             <marker date="1535793139274" expanded="true" signature="832:1069" ph="..." />
             <marker date="1535793139274" expanded="true" signature="4542:4594" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_evqa.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="152" column="17" lean-forward="false" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
-          <folding>
-            <element signature="e#22#31#0" expanded="true" />
-            <marker date="1535793139277" expanded="true" signature="10061:10108" ph="..." />
           </folding>
         </state>
       </provider>
@@ -557,6 +520,34 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocess_msrvttqa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="151" column="30" lean-forward="true" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
+          <folding>
+            <element signature="e#40#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_evqa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1067">
+          <caret line="250" column="68" lean-forward="true" selection-start-line="250" selection-start-column="68" selection-end-line="250" selection-end-column="68" />
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="312" column="58" lean-forward="true" selection-start-line="312" selection-start-column="58" selection-end-line="312" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
