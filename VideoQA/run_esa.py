@@ -267,7 +267,7 @@ def main():
                 break
 
             train(epoch, dataset, config, args.log)
-            # val_acc = val(epoch, dataset, config, args.log)
+            val_acc = val(epoch, dataset, config, args.log)
 
     elif args.mode == 'test':
         print('start test.')
