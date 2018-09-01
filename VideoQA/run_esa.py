@@ -68,11 +68,22 @@ def train(epoch, dataset, config, log_dir):
                     model.question_encode: question,
                     model.answer_encode: answer
                 }
-                _, loss, acc = sess.run(
-                    [model.train, model.loss, model.acc], feed_dict)
+                _, loss, prediction = sess.run(
+                    [model.train, model.loss, model.prediction], feed_dict)
+
+                # cal acc
+                correct = 0
+                for i, row in enumerate(prediction[1]):
+                    #print(row)
+                    for index in row:
+                        if answer[i][index] == 1:
+                            correct += 1
+                            break
+                acc = correct / len(answer)
+
                 total_loss += loss
                 total_acc += acc
-                if batch_idx % 100 == 0:
+                if batch_idx % 10 == 0:
                     print('[TRAIN] epoch {}, batch {}/{}, loss {:.5f}, acc {:.5f}.'.format(
                         epoch, batch_idx, batch_total, loss, acc))
                 batch_idx += 1
@@ -216,15 +227,15 @@ def test(dataset, config, log_dir):
 def main():
     """Main script."""
     parser = argparse.ArgumentParser()
-    parser.add_argument('--mode', required=True,
+    parser.add_argument('--mode', default='test',
                         help='train/test')
-    parser.add_argument('--gpu', required=True,
+    parser.add_argument('--gpu', default='0',
                         help='gpu id')
-    parser.add_argument('--log', required=True,
+    parser.add_argument('--log', default='./log',
                         help='log directory')
-    parser.add_argument('--dataset', required=True,
+    parser.add_argument('--dataset', choices=['msvd_qa', 'msrvtt_qa'], default='msrvtt_qa',
                         help='dataset name, msvd_qa/msrvtt_qa')
-    parser.add_argument('--config', required=True,
+    parser.add_argument('--config', default='0',
                         help='config id')
     args = parser.parse_args()
 
@@ -235,7 +246,7 @@ def main():
             config['train']['batch_size'], config['preprocess_dir'])
     elif args.dataset == 'msrvtt_qa':
         dataset = dt.MSRVTTQA(
-            config['train']['batch_size'], config['preprocess_dir'])
+            config['train']['batch_size'], config['preprocess_dir'], config['model']['answer_num'])
 
     if args.mode == 'train':
         best_val_acc = -1
@@ -253,7 +264,7 @@ def main():
                 break
 
             train(epoch, dataset, config, args.log)
-            val_acc = val(epoch, dataset, config, args.log)
+            # val_acc = val(epoch, dataset, config, args.log)
 
     elif args.mode == 'test':
         print('start test.')
