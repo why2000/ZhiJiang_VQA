@@ -109,8 +109,8 @@ class MSVDQA(object):
             qid = [int(x) for x in question_encode[i].split(',')]
             qid = np.pad(qid, (0, batch_length - len(qid)), 'constant')
             question_batch.append(qid)
-            vgg_batch.append(self.video_feature.root.vgg[video_ids[i]])
-            c3d_batch.append(self.video_feature.root.c3d[video_ids[i]])
+            vgg_batch.append(self.video_feature.root.vgg[video_ids[i - 1]])
+            c3d_batch.append(self.video_feature.root.c3d[video_ids[i - 1]])
 
         self.train_batch_idx[self.current_bucket] += 1
         # if current bucket is ran out, use next bucket.
@@ -130,8 +130,8 @@ class MSVDQA(object):
         answer = self.val_qa.iloc[self.val_example_idx]['answer']
 
         question = [int(x) for x in question_encode.split(',')]
-        vgg = self.video_feature.root.vgg[video_id]
-        c3d = self.video_feature.root.c3d[video_id]
+        vgg = self.video_feature.root.vgg[video_id - 1]
+        c3d = self.video_feature.root.c3d[video_id - 1]
 
         self.val_example_idx += 1
         if self.val_example_idx == self.val_example_total:
