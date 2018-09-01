@@ -206,25 +206,34 @@ def test(dataset, config, log_dir):
             while dataset.has_test_example:
                 vgg, c3d, question, answer, example_id = dataset.get_test_example()
                 feed_dict = {
-                    model.video_feature: [np.add(vgg, c3d) / 2],
+                    model.appear: [vgg],
+                    model.motion: [c3d],
                     model.question_encode: [question],
                 }
-                prediction = sess.run(model.prediction, feed_dict=feed_dict)
-                prediction = prediction[0]
+                prediction,  channel_weight, appear_weight, motion_weight = sess.run(
+                    [model.prediction, model.channel_weight, model.appear_weight, model.motion_weight], feed_dict=feed_dict)
+                #prediction = prediction[0]
+                channel_weight = channel_weight[0]
+                appear_weight = appear_weight[0]
+                motion_weight = motion_weight[0]
 
                 result = result.append(
-                    {'id': example_id, 'answer': answerset[prediction]}, ignore_index=True)
-                if answerset[prediction] == answer:
-                    correct += 1
+                    {'id': example_id, 'answer': prediction[1]}, ignore_index=True)
+                # modified-why
+                # if answerset[prediction] in answer:
+                #     correct += 1
+                #     print(answer, example_id, channel_weight)
+                # print(appear_weight)
+                # print(motion_weight)
 
             result.to_json(os.path.join(
                 log_dir, 'prediction.json'), 'records')
 
-            acc = correct / dataset.test_example_total
-            print('\n[TEST] acc {:.5f}.\n'.format(acc))
+            # acc = correct / dataset.test_example_total
+            # print('\n[TEST] acc {:.5f}.\n'.format(acc))
 
             dataset.reset_test()
-            return acc
+            return None
 
 
 def main():
