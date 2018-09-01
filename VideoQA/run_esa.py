@@ -256,7 +256,7 @@ def main():
         val_acc = 0
         not_improved = -1
 
-        for epoch in range(0, 30):
+        for epoch in range(0, 3000):
             if val_acc > best_val_acc:
                 best_val_acc = val_acc
                 not_improved = 0
