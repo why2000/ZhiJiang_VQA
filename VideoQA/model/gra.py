@@ -194,7 +194,7 @@ class GRA(object):
             b = tf.get_variable('b', [self.answer_num])
             self.logit = tf.nn.softmax(
                 tf.nn.xw_plus_b(fuse, W, b), name='logit')
-            self.prediction = tf.nn.top_k(self.logit, 3, name='prediction')
+            self.prediction = tf.nn.top_k(self.logit, 1, name='prediction')
 
     def build_loss(self, reg_coeff, shu_coeff):
         """Compute loss and acc."""

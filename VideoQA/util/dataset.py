@@ -109,8 +109,8 @@ class MSVDQA(object):
             qid = [int(x) for x in question_encode[i].split(',')]
             qid = np.pad(qid, (0, batch_length - len(qid)), 'constant')
             question_batch.append(qid)
-            vgg_batch.append(self.video_feature.root.vgg[video_ids[i] - 1])
-            c3d_batch.append(self.video_feature.root.c3d[video_ids[i] - 1])
+            vgg_batch.append(self.video_feature.root.vgg[video_ids[i]])
+            c3d_batch.append(self.video_feature.root.c3d[video_ids[i]])
 
         self.train_batch_idx[self.current_bucket] += 1
         # if current bucket is ran out, use next bucket.
@@ -130,8 +130,8 @@ class MSVDQA(object):
         answer = self.val_qa.iloc[self.val_example_idx]['answer']
 
         question = [int(x) for x in question_encode.split(',')]
-        vgg = self.video_feature.root.vgg[video_id - 1]
-        c3d = self.video_feature.root.c3d[video_id - 1]
+        vgg = self.video_feature.root.vgg[video_id]
+        c3d = self.video_feature.root.c3d[video_id]
 
         self.val_example_idx += 1
         if self.val_example_idx == self.val_example_total:
@@ -329,8 +329,10 @@ class MSRVTTQA(object):
         answer = self.test_qa.iloc[self.test_example_idx]['answer']
 
         question = [int(x) for x in question_encode.split(',')]
-        vgg = self.video_feature.root.vgg[video_id]
-        c3d = self.video_feature.root.c3d[video_id]
+        #print(video_id)
+        #print(len(self.video_feature.root.vgg))
+        vgg = self.video_feature.root.vgg[video_id - 1 if video_id != 4159 else video_id - 2]
+        c3d = self.video_feature.root.c3d[video_id - 1 if video_id != 4159 else video_id - 2]
 
         self.test_example_idx += 1
         if self.test_example_idx == self.test_example_total:

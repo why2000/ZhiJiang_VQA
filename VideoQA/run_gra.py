@@ -214,7 +214,7 @@ def test(dataset, config, log_dir):
                 }
                 prediction,  channel_weight, appear_weight, motion_weight = sess.run(
                     [model.prediction, model.channel_weight, model.appear_weight, model.motion_weight], feed_dict=feed_dict)
-                prediction = prediction[0]
+                #prediction = prediction[0]
                 channel_weight = channel_weight[0]
                 appear_weight = appear_weight[0]
                 motion_weight = motion_weight[0]
@@ -235,7 +235,7 @@ def test(dataset, config, log_dir):
             # print('\n[TEST] acc {:.5f}.\n'.format(acc))
 
             dataset.reset_test()
-            return acc
+            return None 
 
 
 def main():
