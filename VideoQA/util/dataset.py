@@ -310,7 +310,7 @@ class MSRVTTQA(object):
             self.has_val_example = False
 
         # answer to one-hot like array
-        answer_onehot = np.zeros(self.answer_num), dtype=np.int64)
+        answer_onehot = np.zeros(self.answer_num, dtype=np.int64)
         for index in answer:
             answer_onehot[index - 1] = 1
 
