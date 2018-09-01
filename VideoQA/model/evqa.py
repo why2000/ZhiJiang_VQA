@@ -80,13 +80,13 @@ class EVQA(object):
             b = tf.get_variable('b', [self.answer_num])
             self.logit = tf.nn.softmax(
                 tf.nn.xw_plus_b(fuse, W, b), name='logit')
-            self.prediction = tf.argmax(self.logit, axis=1, name='prediction')
+            self.prediction = tf.nn.top_k(self.logit, 3, name='prediction')
 
     def build_loss(self, reg_coeff):
         """Compute loss and acc."""
         with tf.name_scope('answer'):
             self.answer_encode = tf.placeholder(
-                tf.float32, [None, None], 'answer_encode')
+                tf.float32, [None, self.answer_num], 'answer_encode')
             #answer_one_hot = tf.one_hot(
             #    self.answer_encode, self.answer_num)
         with tf.name_scope('loss'):
@@ -96,14 +96,16 @@ class EVQA(object):
                 tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES), name='reg_loss')
             self.loss = tf.reduce_mean(sig_loss + reg_coeff * reg_loss)
         with tf.name_scope("acc"):
+            pass
+            #print(self.prediction)
             #correct = 0
             #for idx in self.prediction:
                 #if self.answer_encode[idx] == 1:
                    # correct += 1
             
             #self.acc = correct / len(self.prediction)
-            correct = tf.equal(self.prediction, tf.cast(self.answer_encode, "int64"))
-            self.acc = tf.reduce_mean(tf.cast(correct, "float"))
+            #correct = tf.equal(self.prediction, tf.cast(self.answer_encode, "int64"))
+            #self.acc = tf.reduce_mean(tf.cast(correct, "float"))
 
     def build_train(self, learning_rate):
         """Add train operation."""

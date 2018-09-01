@@ -13,7 +13,7 @@ CONFIG = {
                     'pretrained_embedding': '../data/msvd_qa/word_embedding.npy',
                     'video_feature_dim': 4096,
                     'video_feature_num': 20,
-                    'answer_num': 1000,
+                    'answer_num': 4730,
                     'common_dim': 256
                 },
                 'train': {
@@ -31,7 +31,7 @@ CONFIG = {
                     'pretrained_embedding': '../data/msrvtt_qa/word_embedding.npy',
                     'video_feature_dim': 4096,
                     'video_feature_num': 20,
-                    'answer_num': 1000,
+                    'answer_num': 4730,
                     'common_dim': 256
                 },
                 'train': {
@@ -51,7 +51,7 @@ CONFIG = {
                     'pretrained_embedding': '../data/msvd_qa/word_embedding.npy',
                     'video_feature_dim': 4096,
                     'video_feature_num': 20,
-                    'answer_num': 1000,
+                    'answer_num': 4730,
                     'memory_dim': 256
                 },
                 'train': {
@@ -69,7 +69,7 @@ CONFIG = {
                     'pretrained_embedding': '../data/msrvtt_qa/word_embedding.npy',
                     'video_feature_dim': 4096,
                     'video_feature_num': 20,
-                    'answer_num': 1000,
+                    'answer_num': 4730,
                     'memory_dim': 256
                 },
                 'train': {
@@ -89,7 +89,7 @@ CONFIG = {
                     'pretrained_embedding': '../data/msvd_qa/word_embedding.npy',
                     'video_feature_dim': 4096,
                     'video_feature_num': 20,
-                    'answer_num': 1000,
+                    'answer_num': 4730,
                     'common_dim': 256
                 },
                 'train': {
@@ -107,7 +107,7 @@ CONFIG = {
                     'pretrained_embedding': '../data/msrvtt_qa/word_embedding.npy',
                     'video_feature_dim': 4096,
                     'video_feature_num': 20,
-                    'answer_num': 1000,
+                    'answer_num': 4730,
                     'common_dim': 256
                 },
                 'train': {
@@ -129,7 +129,7 @@ CONFIG = {
                     'frame_num': 20,
                     'motion_dim': 4096,
                     'clip_num': 20,
-                    'answer_num': 1000,
+                    'answer_num': 4730,
                     'common_dim': 256
                 },
                 'train': {
@@ -150,7 +150,7 @@ CONFIG = {
                     'frame_num': 20,
                     'motion_dim': 4096,
                     'clip_num': 20,
-                    'answer_num': 1000,
+                    'answer_num': 4730,
                     'common_dim': 256
                 },
                 'train': {

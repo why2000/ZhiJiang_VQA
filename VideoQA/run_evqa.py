@@ -66,13 +66,24 @@ def train(epoch, dataset, config, log_dir):
                 feed_dict = {
                     model.video_feature: np.add(vgg, c3d) / 2,
                     model.question_encode: question,
-                    model.answer_encode: [a[0] for a in answer]
+                    model.answer_encode: answer
                 }
-                _, loss, acc = sess.run(
-                    [model.train, model.loss, model.acc], feed_dict)
+                _, loss, prediction = sess.run(
+                    [model.train, model.loss, model.prediction], feed_dict)
+               
+                # cal acc
+                correct = 0
+                for i, row in enumerate(prediction[1]):
+                    #print(row)
+                    for index in row:
+                        if answer[i][index] == 1:
+                            correct += 1
+                            break
+                acc = correct / len(answer)
+                #print(acc)
                 total_loss += loss
                 total_acc += acc
-                if batch_idx % 100 == 0:
+                if batch_idx % 10 == 0:
                     print('[TRAIN] epoch {}, batch {}/{}, loss {:.5f}, acc {:.5f}.'.format(
                         epoch, batch_idx, batch_total, loss, acc))
                 batch_idx += 1
@@ -143,10 +154,13 @@ def val(epoch, dataset, config, log_dir):
                     model.question_encode: [question],
                 }
                 prediction = sess.run(model.prediction, feed_dict=feed_dict)
-                prediction = prediction[0]
-                # modified-why
-                if answerset[prediction] in answer:
-                    correct += 1
+                prediction = prediction[1]
+                # modified-ht
+                for i, row in enumerate(prediction):
+                    for index in row:
+                        if answer[i][index] == 1:
+                            correct += 1
+                            break
 
             acc = correct / dataset.val_example_total
             print('\n[VAL] epoch {}, acc {:.5f}.\n'.format(epoch, acc))
@@ -257,7 +271,7 @@ def main():
                 break
 
             train(epoch, dataset, config, args.log)
-            val_acc = val(epoch, dataset, config, args.log)
+            #val_acc = val(epoch, dataset, config, args.log)
 
     elif args.mode == 'test':
         print('start test.')

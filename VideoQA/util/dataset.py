@@ -264,17 +264,13 @@ class MSRVTTQA(object):
 
         #print(self.video_feature.root.vgg.shape, self.train_batch_size)
         for i in range(len(question_encode)):
-            if video_ids[i] == 1:
-                #question_batch = np.delete(question_batch, i)
-                answer_batch = np.delete(answer_batch, i)
-                continue
             qid = [int(x) for x in question_encode[i].split(',')]
             qid = np.pad(qid, (0, batch_length - len(qid)), 'constant')
             question_batch.append(qid)
             #print(max(video_ids))
             #print(type(video_ids[i]), video_ids[i])
-            vgg_batch.append(self.video_feature.root.vgg[video_ids[i] - 2])
-            c3d_batch.append(self.video_feature.root.c3d[video_ids[i] - 2])
+            vgg_batch.append(self.video_feature.root.vgg[video_ids[i] - 1])
+            c3d_batch.append(self.video_feature.root.c3d[video_ids[i] - 1])
 
         self.train_batch_idx[self.current_bucket] += 1
         # if current bucket is ran out, use next bucket.
@@ -291,7 +287,7 @@ class MSRVTTQA(object):
             self.has_train_batch = False
         #print(len(question_batch))
         # answer to one-hot like array
-        answer_onehot = np.zeros((len(answer_batch), self.answer_num))  
+        answer_onehot = np.zeros((len(answer_batch), self.answer_num), dtype=np.int64)  
         for i, row in enumerate(answer_batch):
             for a in row:
                 answer_onehot[i][a - 1] = 1    
@@ -306,8 +302,8 @@ class MSRVTTQA(object):
         answer = self.val_qa.iloc[self.val_example_idx]['answer']
 
         question = [int(x) for x in question_encode.split(',')]
-        vgg = self.video_feature.root.vgg[video_id - 2 if video_id != 1 else 1]
-        c3d = self.video_feature.root.c3d[video_id - 2 if video_id != 1 else 1]
+        vgg = self.video_feature.root.vgg[video_id - 1]
+        c3d = self.video_feature.root.c3d[video_id - 1]
 
         self.val_example_idx += 1
         if self.val_example_idx == self.val_example_total:
