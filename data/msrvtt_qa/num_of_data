@@ -1,7 +1,7 @@
-data train:4170
-data train:16624
+test:4170
+train:16624
 
 答案按是否重复分离后：
-data train:4170
+data test:4170
 data train:31061
 data val:4000
