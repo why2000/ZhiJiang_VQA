@@ -243,7 +243,7 @@ def main():
                         help='train/test')
     parser.add_argument('--gpu', default='0',
                         help='gpu id')
-    parser.add_argument('--log', default='./log',
+    parser.add_argument('--log', default='./log_gra',
                         help='log directory')
     parser.add_argument('--dataset', choices=['msvd_qa', 'msrvtt_qa'], default='msrvtt_qa',
                         help='dataset name, msvd_qa/msrvtt_qa')
@@ -258,7 +258,7 @@ def main():
             config['train']['batch_size'], config['preprocess_dir'])
     elif args.dataset == 'msrvtt_qa':
         dataset = dt.MSRVTTQA(
-            config['train']['batch_size'], config['preprocess_dir'])
+            config['train']['batch_size'], config['preprocess_dir'], config['model']['answer_num'])
 
     if args.mode == 'train':
         best_val_acc = -1
