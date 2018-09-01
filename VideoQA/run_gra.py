@@ -220,19 +220,19 @@ def test(dataset, config, log_dir):
                 motion_weight = motion_weight[0]
 
                 result = result.append(
-                    {'id': example_id, 'answer': answerset[prediction]}, ignore_index=True)
+                    {'id': example_id, 'answer': prediction[1]}, ignore_index=True)
                 # modified-why
-                if answerset[prediction] in answer:
-                    correct += 1
-                    print(answer, example_id, channel_weight)
+                # if answerset[prediction] in answer:
+                #     correct += 1
+                #     print(answer, example_id, channel_weight)
                     # print(appear_weight)
                     # print(motion_weight)
 
             result.to_json(os.path.join(
                 log_dir, 'prediction.json'), 'records')
 
-            acc = correct / dataset.test_example_total
-            print('\n[TEST] acc {:.5f}.\n'.format(acc))
+            # acc = correct / dataset.test_example_total
+            # print('\n[TEST] acc {:.5f}.\n'.format(acc))
 
             dataset.reset_test()
             return acc
