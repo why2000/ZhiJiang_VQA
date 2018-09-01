@@ -170,6 +170,10 @@ class MSRVTTQA(object):
         Note:
             The `train_batch_size` only impacts train. val and test batch size is 1.
         """
+        self.answer_dict = {}
+        with open('../data/msrvtt_qa/answer_set.txt', 'r', encoding='utf-8') as answer_file:
+            for i, ans in enumerate(answer_file.read().split('\n')):
+                self.answer_dict[ans] = i
         self.answer_num = answer_num
         self.train_batch_size = train_batch_size
 
@@ -290,7 +294,7 @@ class MSRVTTQA(object):
         answer_onehot = np.zeros((len(answer_batch), self.answer_num), dtype=np.int64)  
         for i, row in enumerate(answer_batch):
             for a in row:
-                answer_onehot[i][a - 1] = 1    
+                answer_onehot[i][a] = 1    
 
         return vgg_batch, c3d_batch, question_batch, answer_onehot
 
@@ -311,8 +315,8 @@ class MSRVTTQA(object):
 
         # answer to one-hot like array
         answer_onehot = np.zeros(self.answer_num, dtype=np.int64)
-        for index in answer:
-            answer_onehot[index - 1] = 1
+        for ans in answer:
+            answer_onehot[self.answer_dict[ans]] = 1
 
         return vgg, c3d, question, answer_onehot
 
@@ -333,3 +337,4 @@ class MSRVTTQA(object):
             self.has_test_example = False
 
         return vgg, c3d, question, answer, example_id
+
