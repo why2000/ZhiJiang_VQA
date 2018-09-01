@@ -154,9 +154,12 @@ def val(epoch, dataset, config, log_dir):
                     model.question_encode: [question],
                 }
                 prediction = sess.run(model.prediction, feed_dict=feed_dict)
-                prediction = prediction[0]
-                if answerset[prediction] == answer:
-                    correct += 1
+                prediction = prediction[1]
+                for i, row in enumerate(prediction):
+                    for index in row:
+                        if answer[index] == 1:
+                            correct += 1
+                            break
 
             acc = correct / dataset.val_example_total
             print('\n[VAL] epoch {}, acc {:.5f}.\n'.format(epoch, acc))
