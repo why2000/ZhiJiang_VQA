@@ -38,7 +38,7 @@ def train(epoch, dataset, config, log_dir):
             saver = tf.train.Saver()
             if ckpt_path:
                 print('load checkpoint {}.'.format(ckpt_path))
-                lajidaima = int(ckpt_path.split('-')[-1]) - epoch
+                lajidaima = int(ckpt_path.split('-')[-1]) - epoch + 1
                 saver.restore(sess, ckpt_path)
             else:
                 print('no checkpoint.')
@@ -170,7 +170,7 @@ def val(epoch, dataset, config, log_dir):
                 example_id += 1
             acc = correct / dataset.val_example_total
             result.to_json(os.path.join(
-                log_dir, 'validation' + str(acc) +  '.json'), 'records')
+                log_dir, 'validation_' + str(int(acc * 100)) + '_{}'.format(epoch + lajidaima)  +  '_.json'), 'records')
             print('\n[VAL] epoch {}, acc {:.5f}.\n'.format(epoch + lajidaima, acc))
 
             summary = tf.Summary()
