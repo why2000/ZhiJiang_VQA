@@ -116,10 +116,12 @@ def val(epoch, dataset, config, log_dir):
     answerset = pd.read_csv(
         os.path.join(config['preprocess_dir'], 'answer_set.txt'), header=None)[0]
 
+    example_id = 0
+
     with tf.Graph().as_default():
         model = GRA(model_config)
         model.build_inference()
-
+        result = DataFrame(columns=['id', 'answer'])
         with tf.Session(config=sess_config) as sess:
             sum_dir = os.path.join(log_dir, 'summary')
             summary_writer = tf.summary.FileWriter(sum_dir)
@@ -162,7 +164,10 @@ def val(epoch, dataset, config, log_dir):
                         if answer[index] == 1:
                             correct += 1
                             break
-
+                result = result.append({'id': example_id, 'answer': prediction[1]}, ignore_index=True)
+                example_id += 1
+            result.to_json(os.path.join(
+                log_dir, 'validation.json'), 'records')
             acc = correct / dataset.val_example_total
             print('\n[VAL] epoch {}, acc {:.5f}.\n'.format(epoch, acc))
 
