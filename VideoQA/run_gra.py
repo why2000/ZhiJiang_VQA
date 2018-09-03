@@ -170,7 +170,7 @@ def val(epoch, dataset, config, log_dir):
                 example_id += 1
             acc = correct / dataset.val_example_total
             result.to_json(os.path.join(
-                log_dir, 'validation_' + str(int(acc * 100)) + '_{}'.format(epoch + lajidaima)  +  '_.json'), 'records')
+                log_dir, 'validation_' + str(int(acc * 100)) + '_'  + str(epoch + lajidaima)  +  '.json'), 'records')
             print('\n[VAL] epoch {}, acc {:.5f}.\n'.format(epoch + lajidaima, acc))
 
             summary = tf.Summary()
