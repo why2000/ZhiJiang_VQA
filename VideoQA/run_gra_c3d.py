@@ -11,6 +11,8 @@ from model.gra import GRA
 import config as cfg
 import util.dataset as dt
 
+lajidaima = 0
+
 
 def train(epoch, dataset, config, log_dir):
     """Train model for one epoch."""
@@ -37,13 +39,14 @@ def train(epoch, dataset, config, log_dir):
             saver = tf.train.Saver()
             if ckpt_path:
                 print('load checkpoint {}.'.format(ckpt_path))
+                lajidaima = int(ckpt_path.split('-')[-1]) - epoch + 1
                 saver.restore(sess, ckpt_path)
             else:
                 print('no checkpoint.')
                 if not os.path.exists(ckpt_dir):
                     os.makedirs(ckpt_dir)
                 sess.run(tf.global_variables_initializer())
-
+            epoch += lajidaima
             stats_dir = os.path.join(log_dir, 'stats')
             stats_path = os.path.join(stats_dir, 'train.json')
             if os.path.exists(stats_path):
@@ -63,7 +66,7 @@ def train(epoch, dataset, config, log_dir):
 
             while dataset.has_train_batch:
                 vgg, c3d, question, answer = dataset.get_train_batch()
-                vgg = np.zeros((len(vgg), len(vgg[0])))
+                vgg = np.zeros((len(vgg), len(vgg[0]), len(vgg[0][0])))
                 feed_dict = {
                     model.appear: vgg,
                     model.motion: c3d,
@@ -72,7 +75,7 @@ def train(epoch, dataset, config, log_dir):
                 }
                 _, loss, prediction = sess.run(
                     [model.train, model.loss, model.prediction], feed_dict)
-                
+
                 # cal acc
                 correct = 0
                 for i, row in enumerate(prediction[1]):
@@ -166,18 +169,20 @@ def val(epoch, dataset, config, log_dir):
                         if answer[index] == 1:
                             correct += 1
                             break
-                result = result.append({'id': example_id, 'answer': prediction[1]}, ignore_index=True)
+                result = result.append(
+                    {'id': example_id, 'answer': prediction}, ignore_index=True)
                 example_id += 1
-            result.to_json(os.path.join(
-                log_dir, 'validation.json'), 'records')
             acc = correct / dataset.val_example_total
-            print('\n[VAL] epoch {}, acc {:.5f}.\n'.format(epoch, acc))
+            result.to_json(os.path.join(
+                log_dir, 'validation_' + str(int(acc * 100)) + '_' + str(epoch + lajidaima) + '.json'), 'records')
+            print('\n[VAL] epoch {}, acc {:.5f}.\n'.format(
+                epoch + lajidaima, acc))
 
             summary = tf.Summary()
             summary.value.add(tag='val/acc', simple_value=float(acc))
-            summary_writer.add_summary(summary, epoch)
+            summary_writer.add_summary(summary, epoch + lajidaima)
 
-            record = Series([epoch, acc], ['epoch', 'acc'])
+            record = Series([epoch + lajidaima, acc], ['epoch', 'acc'])
             stats = stats.append(record, ignore_index=True)
             stats.to_json(stats_path, 'records')
 
@@ -232,8 +237,8 @@ def test(dataset, config, log_dir):
                 # if answerset[prediction] in answer:
                 #     correct += 1
                 #     print(answer, example_id, channel_weight)
-                    # print(appear_weight)
-                    # print(motion_weight)
+                # print(appear_weight)
+                # print(motion_weight)
 
             result.to_json(os.path.join(
                 log_dir, 'prediction.json'), 'records')
@@ -242,7 +247,7 @@ def test(dataset, config, log_dir):
             # print('\n[TEST] acc {:.5f}.\n'.format(acc))
 
             dataset.reset_test()
-            return None 
+            return None
 
 
 def main():
