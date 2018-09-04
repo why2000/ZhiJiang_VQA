@@ -21,7 +21,7 @@ def extract_vgg(video_directory):
     sess_config.gpu_options.visible_device_list = '0'
 
     with tf.Graph().as_default(), tf.Session(config=sess_config) as sess:
-        extractor = VideoVGGExtractor(20, sess)
+        extractor = VideoVGGExtractor(40, sess)
         for i in range(0, 10000):
             video_path = os.path.join(
                 video_directory,  str(i) + '.mp4')
@@ -41,7 +41,7 @@ def extract_c3d(video_directory):
     sess_config.gpu_options.visible_device_list = '0'
 
     with tf.Graph().as_default(), tf.Session(config=sess_config) as sess:
-        extractor = VideoC3DExtractor(20, sess)
+        extractor = VideoC3DExtractor(40, sess)
         for i in range(0, 10000):
             video_path = os.path.join(
                 video_directory, str(i) + '.mp4')
