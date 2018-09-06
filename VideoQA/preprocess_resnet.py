@@ -170,7 +170,7 @@ def create_qa_encode(vttqa_path, vocab_path, answerset_path,
 
 def main():
     if not os.path.isdir('../data/resnet_qa'):
-        os.makedirs('../data/msrvtt_qa')
+        os.makedirs('../data/resnet_qa')
     # 服务器上跑
     extract_video_feature('../data/train',
                           '../data/resnet_qa/video_feature_20.h5')
