@@ -9,7 +9,7 @@ import tensorflow as tf
 
 from util.preprocess import prune_embedding
 from util.preprocess import VideoC3DExtractor
-from .util.resnet import VideoExtractor
+from util.resnet import VideoExtractor
 
 
 def extract_resnet(video_directory):
@@ -169,11 +169,11 @@ def create_qa_encode(vttqa_path, vocab_path, answerset_path,
 
 
 def main():
-    if not os.path.isdir('../data/msrvtt_qa'):
+    if not os.path.isdir('../data/resnet_qa'):
         os.makedirs('../data/msrvtt_qa')
     # 服务器上跑
     extract_video_feature('../data/train',
-                          '../data/msrvtt_qa/video_feature_20.h5')
+                          '../data/resnet_qa/video_feature_20.h5')
 
     # 用逐条式数据集
     # create_answerset('../data/msrvtt_qa/train_qa_sp.json',
@@ -188,12 +188,12 @@ def main():
     #                 '../data/msrvtt_qa/word_embedding.npy')
 
     # 用列表式数据集
-    create_qa_encode('../data/msrvtt_qa/',
-                     '../data/msrvtt_qa/vocab.txt',
-                     '../data/msrvtt_qa/answer_set.txt',
-                     '../data/msrvtt_qa/train_qa_encode.json',
-                     '../data/msrvtt_qa/val_qa_encode.json',
-                     '../data/msrvtt_qa/test_qa_encode.json')
+    create_qa_encode('../data/resnet_qa/',
+                     '../data/resnet_qa/vocab.txt',
+                     '../data/resnet_qa/answer_set.txt',
+                     '../data/resnet_qa/train_qa_encode.json',
+                     '../data/resnet_qa/val_qa_encode.json',
+                     '../data/resnet_qa/test_qa_encode.json')
 
 
 if __name__ == '__main__':
