@@ -55,7 +55,7 @@ class VideoExtractor(object):
             feature: [batch_size, 4096]
         """
         frames = self._select_frames(path)
-        feature = self.resnet_v2.predict(frames)
+        feature = self.resnet_v2.predict(np.array(frames), batch_size=len(frames))
         return feature
 
 
