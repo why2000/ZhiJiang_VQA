@@ -18,10 +18,11 @@ class VideoExtractor(object):
         """
         tf.keras.backend.set_session(sess)
         self.frame_num = frame_num
-        self.inputs = tf.placeholder(tf.float32, [self.frame_num, 224, 224, 3])
-        self.resnet_v2 = tf.keras.applications.InceptionResNetV2(include_top=False,
-                                                                 input_shape=(299, 299, 3),
-                                                                 pooling='max')
+        # self.inputs = tf.placeholder(tf.float32, [self.frame_num, 224, 224, 3])
+        # self.resnet_v2 = tf.keras.applications.InceptionResNetV2(include_top=False,
+        #                                                          input_shape=(299, 299, 3),
+        #                                                          pooling='max')
+        self.resnet_v2 = tf.keras.applications.ResNet50(False, input_shape=(299, 299, 3), pooling='max')
 
     def _select_frames(self, path):
         """Select representative frames for video.
@@ -64,9 +65,7 @@ if __name__ == '__main__':
         img = Image.open(open('./test.jpg', 'rb'))
         img = img.resize((299, 299), Image.BILINEAR)
         x = np.array(img)
-        model_a = tf.keras.applications.InceptionResNetV2(include_top=False,
-                                                          input_shape=(299, 299, 3),
-                                                          pooling='max')
+        model_a = tf.keras.applications.ResNet50(False, input_shape=(299, 299, 3), pooling='max')
         x = x.reshape((1, 299, 299, 3))
         info = model_a.predict(x)
         print(info.shape)
