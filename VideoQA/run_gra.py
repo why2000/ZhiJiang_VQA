@@ -11,7 +11,6 @@ from model.gra import GRA
 import config as cfg
 import util.dataset as dt
 
-lajidaima = 0
 
 def train(epoch, dataset, config, log_dir):
     """Train model for one epoch."""
@@ -36,17 +35,17 @@ def train(epoch, dataset, config, log_dir):
             ckpt_dir = os.path.join(log_dir, 'checkpoint')
             ckpt_path = tf.train.latest_checkpoint(ckpt_dir)
             saver = tf.train.Saver()
-            lajidaima = 0
+            last_epoch = 0
             if ckpt_path:
                 print('load checkpoint {}.'.format(ckpt_path))
-                lajidaima = int(ckpt_path.split('-')[-1]) - epoch + 1
+                last_epoch = int(ckpt_path.split('-')[-1]) - epoch + 1
                 saver.restore(sess, ckpt_path)
             else:
                 print('no checkpoint.')
                 if not os.path.exists(ckpt_dir):
                     os.makedirs(ckpt_dir)
                 sess.run(tf.global_variables_initializer())
-            epoch += lajidaima
+            epoch += last_epoch
             stats_dir = os.path.join(log_dir, 'stats')
             stats_path = os.path.join(stats_dir, 'train.json')
             if os.path.exists(stats_path):
@@ -134,8 +133,10 @@ def val(epoch, dataset, config, log_dir):
             ckpt_dir = os.path.join(log_dir, 'checkpoint')
             save_path = tf.train.latest_checkpoint(ckpt_dir)
             saver = tf.train.Saver()
+            last_epoch = 0
             if save_path:
                 print('load checkpoint {}.'.format(save_path))
+                last_epoch = int(save_path.split('-')[-1]) - epoch + 1
                 saver.restore(sess, save_path)
             else:
                 print('no checkpoint.')
@@ -154,7 +155,7 @@ def val(epoch, dataset, config, log_dir):
 
             # val iterate over examples
             correct = 0
-
+            loss_total = 0
             while dataset.has_val_example:
                 vgg, c3d, question, answer = dataset.get_val_example()
                 feed_dict = {
@@ -163,7 +164,7 @@ def val(epoch, dataset, config, log_dir):
                     model.answer_encode: [answer]
                 }
                 loss, prediction = sess.run([model.loss, model.prediction], feed_dict=feed_dict)
-
+                loss_total += loss
                 prediction = prediction[1]
                 for i, row in enumerate(prediction):
                     for index in row:
@@ -173,16 +174,17 @@ def val(epoch, dataset, config, log_dir):
                 result = result.append({'id': example_id, 'answer': prediction}, ignore_index=True)
                 example_id += 1
             acc = correct / dataset.val_example_total
+            loss = loss_total / dataset.val_example_total
             result.to_json(os.path.join(
-                log_dir, 'validation_' + str(int(acc * 100)) + '_'  + str(epoch + lajidaima)  +  '.json'), 'records')
-            print('\n[VAL] epoch {}, acc {:.5f}.\n'.format(epoch + lajidaima, acc))
+                log_dir, 'validation_' + str(int(acc * 100)) + '_'  + str(epoch + last_epoch)  +  '.json'), 'records')
+            print('\n[VAL] epoch {}, acc {:.5f}.\n'.format(epoch + last_epoch, acc))
 
             summary = tf.Summary()
             summary.value.add(tag='val/acc', simple_value=float(acc))
             summary.value.add(tag='val/loss', simple_value=float(loss))
-            summary_writer.add_summary(summary, epoch + lajidaima)
+            summary_writer.add_summary(summary, epoch + last_epoch)
 
-            record = Series([epoch + lajidaima, acc, loss], ['epoch', 'acc', 'loss'])
+            record = Series([epoch + last_epoch, acc, loss], ['epoch', 'acc', 'loss'])
             stats = stats.append(record, ignore_index=True)
             stats.to_json(stats_path, 'records')
 
