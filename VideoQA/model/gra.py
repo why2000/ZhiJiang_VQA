@@ -39,10 +39,22 @@ class GRA(object):
         with tf.name_scope('input'):
             self.appear = tf.placeholder(
                 tf.float32, [None, self.frame_num, self.appear_dim], 'appear')
-            self.motion = tf.placeholder(
-                tf.float32, [None, self.clip_num, self.motion_dim], 'motion')
+            # self.motion = tf.placeholder(
+            #     tf.float32, [None, self.clip_num, self.motion_dim], 'motion')
             self.question_encode = tf.placeholder(
                 tf.int64, [None, None], 'question_encode')
+
+        with tf.name_scope('motion_lstm'):
+            lstm = tf.contrib.rnn.BidirectionalGridLSTMCell(num_units=self.appear_dim)
+            hidden_state = tf.zeros([self.appear.shape[0], lstm.state_size])
+            current_state = tf.zeros([self.appear.shape[0], lstm.state_size])
+            state = hidden_state, current_state
+            logits = []
+            for frame_idx in range(self.frame_num):
+                output, state = lstm(self.appear[:, frame_idx], state)
+                logits.append(output)
+
+            self.motion = logits
 
         with tf.variable_scope('embedding'):
             if self.pretrained_embedding:
