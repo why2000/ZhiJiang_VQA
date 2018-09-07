@@ -114,6 +114,7 @@ def val(epoch, dataset, config, log_dir):
     """Validate model."""
     model_config = config['model']
     sess_config = config['session']
+    train_config = config['train']
 
     answerset = pd.read_csv(
         os.path.join(config['preprocess_dir'], 'answer_set.txt'), header=None)[0]
@@ -123,6 +124,8 @@ def val(epoch, dataset, config, log_dir):
     with tf.Graph().as_default():
         model = GRA(model_config)
         model.build_inference()
+        model.build_loss(train_config['reg_coeff'], train_config['shu_coeff'])
+
         result = DataFrame(columns=['id', 'answer'])
         with tf.Session(config=sess_config) as sess:
             sum_dir = os.path.join(log_dir, 'summary')
@@ -156,10 +159,11 @@ def val(epoch, dataset, config, log_dir):
                 vgg, c3d, question, answer = dataset.get_val_example()
                 feed_dict = {
                     model.appear: [vgg],
-                    model.motion: [c3d],
                     model.question_encode: [question],
+                    model.answer_encode: [answer]
                 }
-                prediction = sess.run(model.prediction, feed_dict=feed_dict)
+                loss, prediction = sess.run([model.loss, model.prediction], feed_dict=feed_dict)
+
                 prediction = prediction[1]
                 for i, row in enumerate(prediction):
                     for index in row:
@@ -175,9 +179,10 @@ def val(epoch, dataset, config, log_dir):
 
             summary = tf.Summary()
             summary.value.add(tag='val/acc', simple_value=float(acc))
+            summary.value.add(tag='val/loss', simple_value=float(loss))
             summary_writer.add_summary(summary, epoch + lajidaima)
 
-            record = Series([epoch + lajidaima, acc], ['epoch', 'acc'])
+            record = Series([epoch + lajidaima, acc, loss], ['epoch', 'acc', 'loss'])
             stats = stats.append(record, ignore_index=True)
             stats.to_json(stats_path, 'records')
 
@@ -216,7 +221,6 @@ def test(dataset, config, log_dir):
                 vgg, c3d, question, answer, example_id = dataset.get_test_example()
                 feed_dict = {
                     model.appear: [vgg],
-                    model.motion: [c3d],
                     model.question_encode: [question],
                 }
                 prediction,  channel_weight, appear_weight, motion_weight = sess.run(

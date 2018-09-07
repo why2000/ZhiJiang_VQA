@@ -45,16 +45,18 @@ class GRA(object):
                 tf.int64, [None, None], 'question_encode')
 
         with tf.name_scope('motion_lstm'):
-            lstm = tf.contrib.rnn.BidirectionalGridLSTMCell(num_units=self.appear_dim)
-            hidden_state = tf.zeros([self.appear.shape[0], lstm.state_size])
-            current_state = tf.zeros([self.appear.shape[0], lstm.state_size])
-            state = hidden_state, current_state
-            logits = []
-            for frame_idx in range(self.frame_num):
-                output, state = lstm(self.appear[:, frame_idx], state)
-                logits.append(output)
-
-            self.motion = logits
+            lstm_cell = tf.nn.rnn_cell.BasicLSTMCell(self.appear_dim)
+            logits, _ = tf.nn.bidirectional_dynamic_rnn(lstm_cell, lstm_cell, self.appear, dtype=tf.float32)
+            #lstm = tf.contrib.rnn.BidirectionalGridLSTMCell(num_units=self.appear_dim, num_frequency_blocks=20)
+            #hidden_state = tf.zeros([self.appear.shape[0], lstm.state_size])
+            #current_state = tf.zeros([self.appear.shape[0], lstm.state_size])
+            #state = hidden_state, current_state
+            #logits = []
+            #for frame_idx in range(self.frame_num):
+            #    output, state = lstm(self.appear[:, frame_idx], state)
+            #    logits.append(output)
+            print(logits[0].shape)
+            self.motion = logits[0]
 
         with tf.variable_scope('embedding'):
             if self.pretrained_embedding:
