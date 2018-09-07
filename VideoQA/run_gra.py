@@ -36,6 +36,7 @@ def train(epoch, dataset, config, log_dir):
             ckpt_dir = os.path.join(log_dir, 'checkpoint')
             ckpt_path = tf.train.latest_checkpoint(ckpt_dir)
             saver = tf.train.Saver()
+            lajidaima = 0
             if ckpt_path:
                 print('load checkpoint {}.'.format(ckpt_path))
                 lajidaima = int(ckpt_path.split('-')[-1]) - epoch + 1
@@ -67,7 +68,6 @@ def train(epoch, dataset, config, log_dir):
                 vgg, c3d, question, answer = dataset.get_train_batch()
                 feed_dict = {
                     model.appear: vgg,
-                    model.motion: c3d,
                     model.question_encode: question,
                     model.answer_encode: answer
                 }

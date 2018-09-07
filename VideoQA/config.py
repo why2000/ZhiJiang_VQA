@@ -125,7 +125,7 @@ CONFIG = {
                     'word_dim': 300,
                     'vocab_num': 4000,
                     'pretrained_embedding': '../data/msvd_qa/word_embedding.npy',
-                    'appear_dim': 4096,
+                    'appear_dim': 1536, # 1536 for resnet, defalut 4096
                     'frame_num': 20,
                     'motion_dim': 4096,
                     'clip_num': 20,
@@ -146,7 +146,7 @@ CONFIG = {
                     'word_dim': 300,
                     'vocab_num': 8000,
                     'pretrained_embedding': '../data/msrvtt_qa/word_embedding.npy',
-                    'appear_dim': 4096,
+                    'appear_dim': 2048, # 1536 for resnet, defalut 4096
                     'frame_num': 20,
                     'motion_dim': 4096,
                     'clip_num': 20,
@@ -154,7 +154,7 @@ CONFIG = {
                     'common_dim': 256
                 },
                 'train': {
-                    'batch_size': 64,
+                    'batch_size': 100,
                     'reg_coeff': 1e-7,
                     'shu_coeff': 1e-7,
                     'learning_rate': 0.001
@@ -172,7 +172,7 @@ def get(model, dataset, config_id, gpu_list):
     if dataset == 'msvd_qa':
         config['preprocess_dir'] = '../data/msvd_qa'
     elif dataset == 'msrvtt_qa':
-        config['preprocess_dir'] = '../data/msrvtt_qa'
+        config['preprocess_dir'] = '../data/resnet_qa'
 
     config['model'] = CONFIG[model][dataset][config_id]['model']
     config['train'] = CONFIG[model][dataset][config_id]['train']

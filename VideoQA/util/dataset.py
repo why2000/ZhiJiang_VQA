@@ -171,7 +171,7 @@ class MSRVTTQA(object):
             The `train_batch_size` only impacts train. val and test batch size is 1.
         """
         self.answer_dict = {}
-        with open('../data/msrvtt_qa/answer_set.txt', 'r', encoding='utf-8') as answer_file:
+        with open('../data/resnet_qa/answer_set.txt', 'r', encoding='utf-8') as answer_file:
             for i, ans in enumerate(answer_file.read().split('\n')):
                 self.answer_dict[ans] = i
         self.answer_num = answer_num

@@ -25,7 +25,7 @@ def train(epoch, dataset, config, log_dir):
         model.build_inference()
         model.build_loss(train_config['reg_coeff'], train_config['shu_coeff'])
         model.build_train(train_config['learning_rate'])
-
+        lajidaima = 0
         with tf.Session(config=sess_config) as sess:
             sum_dir = os.path.join(log_dir, 'summary')
             # create event file for graph

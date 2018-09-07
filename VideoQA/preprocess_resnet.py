@@ -58,8 +58,8 @@ def extract_video_feature(video_directory, feature_path):
         feature_path, 'w', 'Extracted video features of the MSRVTT-QA dataset.')
     vgg_features = extract_resnet(video_directory)
     h5file.create_array('/', 'vgg', vgg_features, 'vgg16 feature')
-    c3d_features = extract_c3d(video_directory)
-    h5file.create_array('/', 'c3d', c3d_features, 'c3d feature')
+    #c3d_features = extract_c3d(video_directory)
+    #h5file.create_array('/', 'c3d', c3d_features, 'c3d feature')
     h5file.close()
 
 
@@ -73,7 +73,7 @@ def create_answerset(trainqa_path, answerset_path):
     train_qa = pd.read_json(trainqa_path)
     # print(train_qa)
     answer_freq = train_qa['answer'].value_counts()
-    answer_freq = DataFrame(answer_freq.iloc[0:10000])
+    answer_freq = DataFrame(answer_freq.iloc[0:2000])
     answer_freq.to_csv(answerset_path, columns=[], header=False)
 
 
