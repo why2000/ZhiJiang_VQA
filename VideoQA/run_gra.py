@@ -136,7 +136,7 @@ def val(epoch, dataset, config, log_dir):
             last_epoch = 0
             if save_path:
                 print('load checkpoint {}.'.format(save_path))
-                last_epoch = int(save_path.split('-')[-1]) - epoch + 1
+                last_epoch = int(save_path.split('-')[-1]) - epoch
                 saver.restore(sess, save_path)
             else:
                 print('no checkpoint.')
