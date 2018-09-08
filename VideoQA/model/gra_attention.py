@@ -65,22 +65,23 @@ class GRA(object):
                 embedding_matrix, self.question_encode, name='word_embedding')
 
         with tf.name_scope('motion_attention'):
-            print(question_embedding.shape)
+            #print(question_embedding.shape)
             lstm_cell = tf.nn.rnn_cell.BasicLSTMCell(self.word_dim, state_is_tuple=True)
             _, final_state = tf.nn.dynamic_rnn(lstm_cell, question_embedding, dtype=tf.float32)
-            print(final_state[1])
-            print('motion feature shape', self.motion_feature.shape)
+            #print(final_state[1].shape)
+            #print('motion feature shape', self.motion_feature.shape)
             W = tf.get_variable(
                 'W', [self.word_dim, self.appear_dim],
                 regularizer=tf.nn.l2_loss
             )
             b = tf.get_variable('b', [self.appear_dim])
             question_atten_embed = tf.nn.xw_plus_b(final_state[1], W, b)
-            atten_output = question_atten_embed * self.motion_feature
+            #print('question_atten_embed_shape', question_atten_embed.shape)
+            atten_output = self.motion_feature * tf.tile(tf.expand_dims(question_atten_embed, 1), [1, self.frame_num, 1])
             atten_output_softmax = tf.nn.softmax(atten_output)
-            print('atten softmax shape', atten_output_softmax.shape)
+            #print('atten softmax shape', atten_output_softmax.shape)
             self.motion = self.motion_feature * atten_output_softmax
-
+            #print('motion feature', self.motion.shape)
 
         with tf.variable_scope('transform_video'):
             with tf.variable_scope('appear'):
