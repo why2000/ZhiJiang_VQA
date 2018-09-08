@@ -69,6 +69,7 @@ class GRA(object):
             lstm_cell = tf.nn.rnn_cell.BasicLSTMCell(self.word_dim, state_is_tuple=True)
             _, final_state = tf.nn.dynamic_rnn(lstm_cell, question_embedding, dtype=tf.float32)
             print(final_state[1])
+            print('motion feature shape', self.motion_feature.shape)
             W = tf.get_variable(
                 'W', [self.word_dim, self.appear_dim],
                 regularizer=tf.nn.l2_loss
@@ -77,10 +78,8 @@ class GRA(object):
             question_atten_embed = tf.nn.xw_plus_b(final_state[1], W, b)
             atten_output = question_atten_embed * self.motion_feature
             atten_output_softmax = tf.nn.softmax(atten_output)
-            print(atten_output_softmax.shape)
-            self.motion = self.motion_feature * \
-                          tf.tile(tf.expand_dims(atten_output_softmax, 1),
-                                  [1, 20, 1])
+            print('atten softmax shape', atten_output_softmax.shape)
+            self.motion = self.motion_feature * atten_output_softmax
 
 
         with tf.variable_scope('transform_video'):
