@@ -46,9 +46,9 @@ class GRA(object):
                 tf.int64, [None, None], 'question_encode')
 
         with tf.name_scope('motion_lstm'):
-            lstm_cell = tf.nn.rnn_cell.BasicLSTMCell(self.appear_dim)
+            lstm_cell = tf.nn.rnn_cell.BasicLSTMCell(self.appear_dim, state_is_tuple=False)
             logits, _ = tf.nn.bidirectional_dynamic_rnn(lstm_cell, lstm_cell, self.appear, dtype=tf.float32)
-            self.motion = logits[0]
+            self.motion = logits
 
         with tf.variable_scope('embedding'):
             if self.pretrained_embedding:
@@ -64,7 +64,7 @@ class GRA(object):
 
         with tf.name_scope('motion_attention'):
             print(question_embedding.shape)
-            lstm_cell = tf.nn.rnn_cell.BasicLSTMCell(self.word_dim)
+            lstm_cell = tf.nn.rnn_cell.BasicLSTMCell(self.word_dim, state_is_tuple=False)
             _, final_state = tf.nn.dynamic_rnn(lstm_cell, question_embedding, dtype=tf.float32)
             print(final_state)
 
