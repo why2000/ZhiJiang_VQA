@@ -80,7 +80,7 @@ class GRA(object):
             print(atten_output_softmax.shape)
             self.motion = self.motion_feature * \
                           tf.tile(tf.reshape(atten_output_softmax,
-                                             [1] + atten_output_softmax.shape),
+                                             [1] + list(atten_output_softmax.shape)),
                                   [self.motion_feature.shape[0], [1] * len(atten_output_softmax.shape)])
 
 
