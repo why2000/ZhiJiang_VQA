@@ -64,7 +64,9 @@ class GRA(object):
 
         with tf.name_scope('motion_attention'):
             print(question_embedding.shape)
-            # _, final_state = tf.nn.rnn_cell.BasicLSTMCell(self.word_dim)
+            lstm_cell = tf.nn.rnn_cell.BasicLSTMCell(self.word_dim)
+            _, final_state = tf.nn.dynamic_rnn(lstm_cell, question_embedding, dtype=tf.float32)
+            print(final_state)
 
         with tf.variable_scope('transform_video'):
             with tf.variable_scope('appear'):
