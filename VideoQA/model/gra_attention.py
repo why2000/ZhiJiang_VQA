@@ -48,7 +48,7 @@ class GRA(object):
         with tf.name_scope('motion_lstm'):
             lstm_cell = tf.nn.rnn_cell.BasicLSTMCell(self.appear_dim)
             logits, _ = tf.nn.bidirectional_dynamic_rnn(lstm_cell, lstm_cell, self.appear, dtype=tf.float32)
-            self.motion_feature = logits[0]
+            self.motion = logits[0]
 
         with tf.variable_scope('embedding'):
             if self.pretrained_embedding:
