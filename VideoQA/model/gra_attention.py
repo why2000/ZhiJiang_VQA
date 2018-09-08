@@ -50,7 +50,7 @@ class GRA(object):
             logits, _ = tf.nn.bidirectional_dynamic_rnn(lstm_cell, lstm_cell, self.appear, dtype=tf.float32)
             # print(logits[1])
             # hidden state
-            self.motion = logits[1]
+            self.motion_feature = logits[1]
 
         with tf.variable_scope('embedding'):
             if self.pretrained_embedding:
@@ -69,7 +69,16 @@ class GRA(object):
             lstm_cell = tf.nn.rnn_cell.BasicLSTMCell(self.word_dim, state_is_tuple=True)
             _, final_state = tf.nn.dynamic_rnn(lstm_cell, question_embedding, dtype=tf.float32)
             print(final_state[1])
-            
+            W = tf.get_variable(
+                'W', [self.word_dim, self.appear_dim],
+                regularizer=tf.nn.l2_loss
+            )
+            b = tf.get_variable('b', [self.appear_dim])
+            question_atten_embed = tf.nn.xw_plus_b(final_state[1], W, b)
+            atten_output = question_atten_embed * self.motion_feature
+            atten_output_softmax = tf.nn.softmax(atten_output)
+            print(atten_output_softmax.shape)
+
 
         with tf.variable_scope('transform_video'):
             with tf.variable_scope('appear'):
