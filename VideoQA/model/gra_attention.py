@@ -79,9 +79,8 @@ class GRA(object):
             atten_output_softmax = tf.nn.softmax(atten_output)
             print(atten_output_softmax.shape)
             self.motion = self.motion_feature * \
-                          tf.tile(tf.reshape(atten_output_softmax,
-                                             [1] + list(atten_output_softmax.shape)),
-                                  [self.motion_feature.shape[0], [1] * len(atten_output_softmax.shape)])
+                          tf.tile(tf.expand_dims(atten_output_softmax, 1),
+                                  [1, 20, 1])
 
 
         with tf.variable_scope('transform_video'):
